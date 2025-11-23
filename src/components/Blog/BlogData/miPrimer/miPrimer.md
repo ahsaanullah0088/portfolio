@@ -1,35 +1,49 @@
-# **Mi primera publicación en este blog!!**
+---
+title: "My First Post on This Blog!!"
+author: "Ahsaan Ullah"
+date: "2025-02-15"
+tags:
+  - portfolio
+  - web development
+  - markdown
+  - personal blog
+  - frontend
+---
 
-# Mi portafolio
+# **My First Post on This Blog!!**
 
-Luego de cierto tiempo en pensar en hacer un **portafolio**, al fin pude lograrlo, no sin antes pasar por mas de 10 video tutoriales, 20 artículos etc. Fue tardado porque no sabia como hacer muchas cosas, tenia que aprender mucho.
+# My Portfolio
 
-Mi idea era tener un espacio para mostrar mis proyectos y mi información de contacto, me di cuenta que mis proyectos personales no deberían ser fáciles, deberían tomar un reto y que yo pudiera avanzar, por lo que fui agregando secciones y llego la idea de un **blog**.
+After spending some time thinking about creating a **portfolio**, I finally managed to finish it — but only after going through more than 10 video tutorials, 20 articles, and lots of trial and error. It took time because there were many things I didn’t know how to do, so I had to learn a lot along the way.
 
 ---
 
 ## Blog
 
-La idea de este blog no es hablar tanto de mi, va mas enfocado al **desarrollo de software** tal vez haciendo tutoriales o explicando como fue la construncció de algunos de mis proyectos, mejorar mi escritura y tal vez en algun momento escribir anécdoas, aventuras y esas cosillas.
+The idea of this blog is not to talk too much about myself. Instead, it’s more focused on **software development** — maybe sharing tutorials, breaking down how I built some of my projects, improving my writing, and eventually posting anecdotes or random stories.
 
-Lo mas complicado fué decidirse a hacerlo, tecnicamente tambien fue complicado ya que no era la idea al principio por lo que no hay backend ni base de datos, ni herramientas o plantillas como **docusaurus** para facilitar el desarrollo, todo esta localmente. Pero tiene una desventaja y es que, qué pasará cuando tenga muchos archivos? el proyecto se hará muy pesado 🤔.
+The hardest part was simply deciding to start. Technically, it was also challenging because this wasn’t part of the original plan. There is no backend, no database, and no tools or templates like **Docusaurus** to make things easier. Everything is local.  
+But it has one downside:  
+What will happen when I have too many files? The project might become very heavy 🤔.
 
-&nbsp;&nbsp;
+&nbsp;
 
-### **Implementación**
+### **Implementation**
 
-Decidir que método o formato usar para la elaboración de las publicaciones como primera opcion fue **markdown** .md que permite estructurar contenido sin la necesidad de incluir _HTML_ o _CSS_.
-Esto facilita mucho la creacion de contenido pero complica la implementación: Buscar el archivo .md dinamicamente por publicación, obtener el texto dentro de ese archivo y despues renderizarlo estilizado junto con sus metadatos (titulo, autor, fecha...).
+For writing posts, my first choice was **Markdown (.md)** because it allows clean content structure without needing _HTML_ or _CSS_.  
+This makes writing much easier, but implementation becomes harder:  
+finding the .md file dynamically for each post, reading its content, and then rendering it with styles and metadata (title, author, date…).
 
-Con una estructura no muy complicada creo yo para agregar mas publicaciones solo es necesario agregar un archivo nuevo en formato markdown .md y algunos datos extra como titulo, fecha, etiquetas...
+With the structure I have now, adding a new post is simple — just create a Markdown file and include some extra data like title, date, tags…
 
-Algo complicado que todavia no logro es mostrar imagenes alojadas localmente, por ahora las subo a **Imgur**. Las publicaciones solo se cargan cuando se abren, de modo que si la cantidad de publicaciones aumenta la carga inicial no tardará más.
+Something I still haven’t solved is loading **local images**. For now, I upload them to **Imgur**.  
+Posts only load when they are opened, so even if the number of posts grows, the initial load time won’t be affected.
 
 ---
 
-## Futuro...
+## Future…
 
-A futuro me gustaria agregar algun **modo oscuro** , soporte para el idioma ingles y un sistema de pagos para practicar y aprender, me faltan terminar algunas secciones que son el listado completo del portafolio y blog, si me animo talves un **buscador**.
-Aunque la verdad me gustaria mas empezar nuevas ideas, ya aprendí mucho con este proyecto
 
-Si llegaste hasta aquí... Gracias por leer <3 💻
+Although honestly, I feel more excited to start new ideas — I’ve already learned a lot from this project.
+
+If you’ve read all the way to the end… thank you for reading <3 💻

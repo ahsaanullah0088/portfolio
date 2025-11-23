@@ -1,108 +1,147 @@
-# **Gestión de Dependencias y Paquetes con NPM**
+---
+title: "Dependency & Package Management with NPM"
+author: "Ahsaan Ullah"
+date: "2025-02-20"
+tags:
+  - npm
+  - nodejs
+  - javascript
+  - packages
+  - dependencies
+  - learning
+---
 
-Recien terminé un curso de **NPM** en la plataforma de [PLatzi](https://platzi.com/cursos/npm/) &nbsp;fue un curso sencillo a repaso hago esta publicación.
+# **Dependency & Package Management with NPM**
+
+I recently completed an **NPM** course on the platform  
+[Platzi](https://platzi.com/cursos/npm/) — it was a simple refresher, so I’m writing this post as notes and summary.
 
 ---
 
-## ¿Qué es NPM (node package manager) ?
+## What is NPM (Node Package Manager)?
 
-Es un gestor de paquetes por defecto para Node.js, el más popular que tiene JavaScript, donde encontrarás una gran cantidad de recursos para poder implementar en tus proyectos. También vas a poder crear tus propios paquetes y compartirlos con toda la comunidad. [NPM](https://www.npmjs.com/)
+It’s the default package manager for Node.js and the most popular one in JavaScript.  
+Here you’ll find thousands of resources, tools, and libraries that you can use in your projects.  
+You can also publish your own packages and share them with the community.  
+Official website: [NPM](https://www.npmjs.com/)
 
-### **Primeros Pasos**
+---
 
-- Instalar [NodeJs](https://nodejs.org/es/). Node.js trae integrado npm con su instalación
-- Podemos también verificar si hay versiones más recientes de NPM e instalarlas con el comando  
+## **Getting Started**
+
+- Install [Node.js](https://nodejs.org/) — Node comes with NPM included.
+- You can also check if newer NPM versions exist and install them using:  
   `npm install -g npm@latest`
 
-### **Recomendación**
+### **Recommendation**
 
-> Manejar npm es muy fácil, y cualquier duda que tengas sobre algún comando puedes utilizar alguno de los siguientes comandos:
+> NPM is easy to use, and if you ever have doubts about a command,
+> you can use:
 >
-> - `npm help` Muestra los comandos más utilizados y su uso, y también todos los comandos disponibles
-> - `npm <command> -h` Muestra la ayuda sobre algún comando
+> - `npm help` → Shows common commands, their usage, and the full list of available commands  
+> - `npm <command> -h` → Shows help for a specific command
 
-Otro buen recurso es buscar documentación
-
-## Configuración básica
-
-### **Iniciar un proyecto**
-
-`npm init` Crea un archivo `package.json` el cual tiene toda la información sobre nuestro proyecto, los paquetes, scripts, etc.
-
-`npm init -y` o `npm init -yes` Crea el archivo `package.json` con la información básica de nuestro proyecto diciendo si a todo, con los datos por defecto.
-
-Y para acelerar el proceso del comando `npm init -y` podemos establecer datos predeterminados:
-
-`npm set init.author.email <email>` Asigna un correo como predeterminado
-
-`npm set init.author.name <name>` Asigna un nombre como predeterminado
-
-`npm set init.license <license>` Asigna una licencia como predeterminada
-
-## Instalación de dependencias
-
-### **Instalación de dependencias Requeridas**
-
-Las dependencias deben ser instaladas en la carpeta raíz de nuestro proyecto.
-
-`npm install <pkg>` || `npm i <pkg> —save` || `npm i <pkg> —S` || `npm i <pkg>` Por defecto lleva el flag -S de save, este comando instala como una dependencia requerida para el proyecto (Necesaria para producción)
-
-Instalar paquete moment `npm install moment`
-
-- Podemos reducir la sintaxis, donde **i** es la abreviatura para install y **-S** la abreviatura para —save
-- Carpeta **node_modules**: aquí se van a instalar todos los módulos que agreguemos a nuestro proyecto.
-- Archivo **package-lock.json**: evita este comportamiento general de actualizar versiones minor o fix de modo que cuando alguien clona nuestro repositorio y ejecuta **npm install** en su equipo, npm examinará **package-lock.json** e instalará la versión exacta de los paquete que nosotros habíamos instalado, ignorando así los **^** y **~** de package.json.
-- Simular la instalación de un paquete `npm i <pkg> --dry-run`
-- Forzar la instalación de un paquete ` npm i <pkg> -f` || `npm i <pkg> --force `
-- Instalar una versión específica de un paquete `npm i <pkg> @<version>`
-
-### **Instalación de dependencias Globales**
-
-`npm i <pkg> -g` Instala un paquete de manera global para poder utilizarlos en diferentes proyectos.
-
-Luego de su instalación, podemos ver la lista de dependencias que tenemos instaladas de forma global con el siguiente comando: `npm list -g --depth 0`
-
-### **Instalación de dependencias Opcionales**
-
-`npm i <pkg> -O` Podemos instalar de forma opcional un paquete
-
-### **Listar paquetes del proyecto**
-
-`npm list` Para listar los paquetes que tiene un proyecto en específico , Mostrar el árbol de jerarquía de los paquetes
-
-## Actualizar y eliminar paquetes
-
-- `npm update` -- Actualiza todas las dependecias de nuestro proyecto.
-- `npm update <pkg>` -- Actualiza un paquete en especifico.
-- `npm uninstall <pkg>` -- Desistala del proyecto y el json una dependecia.
-- `npm uninstall <pkg>` --no-save -- Desinstala el paquete de node_modules pero no del **package.json**.
+Another great option is always reading documentation.
 
 ---
 
-- `npm outdate` Muestra los paquetes que pueden ser actualizados, la versión actual y la más reciente a la que se puede actualizar, además de su ubicación y si es requerido por otra dependencia también dirá cual es la dependencia que lo necesita.
-- `npm outdate —dd` Muestra a mayor detalle los paquetes desactualizados y todas las revisiones
-  (El `—dd` activa el modo `—verbose` y lo que hace es que muestra información detallada, también se puede utilizar para otros comandos)
+## Basic Configuration
 
-## **Seguridad**
+### **Initialize a Project**
 
-- `npm audit` -- Muestra más información sobre las vulnerabilidades.
-- `npm audit --json` -- Hace lo mismo pero con un json.
-- `npm update <pkg> --depth 2` -- Actualiza el paquete vulnerable (Depth es la profundidad a la que llegara)
+`npm init` → Creates a `package.json` file which contains project info, dependencies, scripts, etc.
 
-## Símbolos de las versiones de los paquetes
+`npm init -y` or `npm init --yes` → Creates a default `package.json` quickly, accepting all defaults.
 
-`**^**` Actualiza cuando se hacen cambios menores o parches / bug fixes
-Este símbolo se llama _acento circunflejo (En México)_ y se pone con `alt + 94` \*\*
+You can also set default values to speed up the process:
 
-`~` Actualiza cuando se hacen parches / bug fixes
-Este símbolo se llama _virgulilla (En México)_ y se pone con `alt + 126`
+- `npm set init.author.email <email>`
+- `npm set init.author.name <name>`
+- `npm set init.license <license>`
 
-**`<`** Versión menor a la indicada.
+---
 
-**`<=`** Versión menor o igual a la indicada.
+## Installing Dependencies
 
-**`>`** Versión mayor a la indicada.
+### **Installing Required Dependencies**
 
-**`>=`** Versión mayor o igual a la indicada.
+Dependencies must be installed in the root folder of your project.
 
-![ff](https://blog.desdelinux.net/wp-content/uploads/2020/10/NPM.jpg.webp)
+`npm install <pkg>`  
+`npm i <pkg> --save`  
+`npm i <pkg> -S`  
+All of these install the package as a production dependency (default behavior).
+
+Example:  
+Install Moment.js → `npm install moment`
+
+- **i** is a shortcut for *install*  
+- **-S** is a shortcut for *--save*
+- **node_modules** → Folder where all modules are installed
+- **package-lock.json** → Ensures that when the project is cloned, the exact same package versions are installed (ignores `^` and `~`)
+
+Useful commands:
+
+- Simulate installation: `npm i <pkg> --dry-run`
+- Force installation: `npm i <pkg> -f` or `npm i <pkg> --force`
+- Install a specific version: `npm i <pkg>@<version>`
+
+---
+
+### **Installing Global Dependencies**
+
+`npm i <pkg> -g` → Installs a package globally so you can use it anywhere.
+
+Check your global packages:
+
+`npm list -g --depth 0`
+
+---
+
+### **Installing Optional Dependencies**
+
+`npm i <pkg> -O` → Installs a package as an optional dependency.
+
+---
+
+### **List Project Packages**
+
+`npm list` → Lists all packages in a project and shows the dependency tree.
+
+---
+
+## Updating & Removing Packages
+
+- `npm update` → Updates all dependencies
+- `npm update <pkg>` → Updates a specific dependency
+- `npm uninstall <pkg>` → Removes the dependency from the project and from package.json
+- `npm uninstall <pkg> --no-save` → Removes from node_modules but keeps it in package.json
+
+---
+
+- `npm outdated` → Shows packages that can be updated, current version, latest version, and dependency info  
+- `npm outdated --dd` → Shows deeper detailed logs  
+  (`--dd` enables verbose mode and works with other commands too)
+
+---
+
+## **Security**
+
+- `npm audit` → Shows vulnerability information  
+- `npm audit --json` → Same output but in JSON format  
+- `npm update <pkg> --depth 2` → Updates vulnerable packages (depth = how deep it checks)
+
+---
+
+## Version Symbols in Package.json
+
+- `^` → Updates minor + patch versions  
+- `~` → Updates only patch versions  
+- `<` → Lower than  
+- `<=` → Lower or equal  
+- `>` → Greater than  
+- `>=` → Greater or equal  
+
+---
+
+![npm](https://blog.desdelinux.net/wp-content/uploads/2020/10/NPM.jpg.webp)
