@@ -17,7 +17,7 @@ function ModalCard({ project }) {
         </span>
         <h1>{title}</h1>
         <p>{desc}</p>
-        <h4>Tecnologias | Herramientas Usadas | Features </h4>
+        <h4>Technologies | Tools Used | Features </h4>
         <p>{technologies.map((tech) => `${tech} • `)}</p>
         <div className={styles.modalActions}>
           {links.code && (
@@ -28,7 +28,7 @@ function ModalCard({ project }) {
               target="_blank"
               rel="noreferrer noopener"
             >
-              VER CODIGO <i className="fab fa-github" />
+              VIEW CODE <i className="fab fa-github" />
             </a>
           )}
           {links.page && (
@@ -39,7 +39,7 @@ function ModalCard({ project }) {
               target="_blank"
               rel="noreferrer noopener"
             >
-              VISITAR PROYECTO <i className="fas fa-chevron-right" />
+              VIEW PROJECT <i className="fas fa-chevron-right" />
             </a>
           )}
         </div>

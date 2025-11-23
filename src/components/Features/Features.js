@@ -13,12 +13,7 @@ function Features() {
   return (
     <section className={styles.Features} id="features" ref={sectionRef}>
       <div className="container">
-        <div
-          className={`heading ${
-            isInViewportOnce ? 'useSlideInLeft' : 'useSlideInLeftEnter'
-          }`}
-        >
-          <h4>Skills</h4>
+        <div className={`heading `}>
           <h1>What I Do</h1>
         </div>
 
