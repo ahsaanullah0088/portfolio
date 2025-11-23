@@ -104,8 +104,8 @@ function Hero() {
             <div className={`col_1 ${isInViewport ? styles.slideIn : ''}`}>
               <h5>DOWNLOAD RESUME</h5>
               <a
-                href="https://drive.google.com/file/d/1OPiaoNlPxxoZ497HpWWV2knDArjwVtyX/view?usp=sharing" // replace with actual resume path
-                download
+                href="https://drive.google.com/uc?export=download&id=1OPiaoNlPxxoZ497HpWWV2knDArjwVtyX"
+                download="Ahsaan_Ullah_Resume.pdf"
                 className={styles.downloadBtn}
               >
                 Download Resume
