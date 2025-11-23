@@ -102,31 +102,14 @@ function Hero() {
             </div>
 
             <div className={`col_1 ${isInViewport ? styles.slideIn : ''}`}>
-              <h5>LEARNING</h5>
-              <figure className={styles.skillBtn}>
-                <img
-                  width="50px"
-                  height="50px"
-                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
-                  alt="React"
-                />
-              </figure>
-              <figure className={styles.skillBtn}>
-                <img
-                  width="50px"
-                  height="50px"
-                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg"
-                  alt="NodeJs"
-                />
-              </figure>
-              <figure className={styles.skillBtn}>
-                <img
-                  width="50px"
-                  height="50px"
-                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
-                  alt="JavaScript"
-                />
-              </figure>
+              <h5>DOWNLOAD RESUME</h5>
+              <a
+                href="/path-to-your-resume.pdf" // replace with actual resume path
+                download
+                className={styles.downloadBtn}
+              >
+                Download Resume
+              </a>
             </div>
           </div>
         </div>

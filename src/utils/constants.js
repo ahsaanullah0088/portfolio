@@ -20,6 +20,8 @@ export const constants = {
     twitter: 'https://i.imgur.com/XOaGLwf.png',
   },
   cursos: {
+    DevWeekends:
+      'https://drive.google.com/file/d/1drp31yVaDWfrtYwiDeJW4qGFbKjLTFSM/view?usp=sharing',
     inglesB1:
       'https://drive.google.com/file/d/1UY3Q3zcZI4OoRFyfLIVFZaJb2qCRIkPm/view?usp=sharing',
     inglesC1: 'https://www.efset.org/cert/7oD4Fh',

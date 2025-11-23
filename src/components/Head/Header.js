@@ -1,5 +1,4 @@
 import { useState, lazy, Suspense, useEffect } from 'react';
-
 import scrollTop from '../../utils/helpers/scrollTop';
 import useToggle from '../../utils/hooks/useToggle';
 import useScrollInto from '../../utils/hooks/useScrollInto';
@@ -7,16 +6,12 @@ import useScrollSpy from '../../utils/hooks/useScrollSpy';
 
 import logo1 from '../../assets/Logo.png';
 import styles from './Header.module.css';
-
-import Modal from '../Modal/Modal';
 import Loader from '../Loader';
-
+// eslint-disable-next-line import/newline-after-import
+import Modal from '../Modal/Modal';
 const ModalConfig = lazy(() => import('./ModalConfig'));
-const AboutMe = lazy(() => import('../AboutMe/AboutMe'));
 
 const Header = () => {
-  const [modal, setModal] = useState(false);
-
   const { open, handleOpen, handleClose } = useToggle();
   const [mobile, setMobile] = useState(false);
   const [activeNav, setActiveNav] = useState(false);
@@ -74,10 +69,6 @@ const Header = () => {
   return (
     <>
       <Suspense fallback={<Loader />}>
-        <Modal openModal={modal} fnCloseModal={() => setModal(false)}>
-          <AboutMe />
-        </Modal>
-
         <Modal
           openModal={open}
           fnCloseModal={() => handleClose()}
@@ -94,15 +85,21 @@ const Header = () => {
               width="200px"
               height="50px"
               src={logo1}
-              alt="<AntonioAyola/>"
+              alt="<Ahsaan Ullah/>"
               className={styles.logo}
             />
           </button>
 
+          {/* Desktop nav */}
           <ul className={styles.navLinks}>
             <li className="home">
               <a title="home" href="#!" onClick={() => handleLink('home')}>
                 home
+              </a>
+            </li>
+            <li className="about">
+              <a title="about me" href="#!" onClick={() => handleLink('about')}>
+                about me
               </a>
             </li>
             <li className="features">
@@ -123,18 +120,13 @@ const Header = () => {
                 portfolio
               </a>
             </li>
-            <li className="about">
-              <a title="about me" href="#!" onClick={() => setModal(true)}>
-                ABOUT ME
-              </a>
-            </li>
             <li className="clients">
               <a
                 title="recommendations"
                 href="#!"
                 onClick={() => handleLink('clients')}
               >
-                Recommendations
+                recommendations
               </a>
             </li>
             <li className="blog">
@@ -167,116 +159,86 @@ const Header = () => {
                   Install App
                 </button>
               </li>
-            ) : (
+            ) : null}
+          </ul>
+
+          {/* Mobile nav */}
+          <ul
+            className={`${styles.navMobileLinks} ${
+              mobile ? styles.navMobileLinksWidth : ''
+            }`}
+          >
+            <li className="home">
+              <a title="home" href="#!" onClick={() => handleLink('home')}>
+                home
+              </a>
+            </li>
+            <li className="features">
+              <a
+                title="skills"
+                href="#!"
+                onClick={() => handleLink('features')}
+              >
+                skills
+              </a>
+            </li>
+            <li className="portfolio">
+              <a
+                title="portfolio"
+                href="#!"
+                onClick={() => handleLink('portfolio')}
+              >
+                portfolio
+              </a>
+            </li>
+            <li className="about">
+              <a title="about me" href="#!" onClick={() => handleLink('about')}>
+                about me
+              </a>
+            </li>
+            <li className="recommendations">
+              <a
+                title="recommendations"
+                href="#!"
+                onClick={() => handleLink('clients')}
+              >
+                recommendations
+              </a>
+            </li>
+            <li className="blog">
+              <a title="blog" href="#!" onClick={() => handleLink('blog')}>
+                blog
+              </a>
+            </li>
+            <li className="contact">
+              <a
+                title="contact"
+                href="#!"
+                onClick={() => handleLink('contact')}
+              >
+                contact
+              </a>
+            </li>
+            <li>
+              <a title="settings" href="#!" onClick={() => handleOpen()}>
+                <i className={styles.cogBtn} title="Theme Config" />
+              </a>
+            </li>
+
+            {isReadyForInstall ? (
               <li>
                 <button
                   className={styles.homeBtn}
                   type="button"
-                  onClick={() => setModal(true)}
+                  onClick={() => downloadApp(true)}
                 >
-                  SEE MORE
+                  Install App
                 </button>
               </li>
-            )}
+            ) : null}
           </ul>
 
-          {true && (
-            <ul
-              className={`${styles.navMobileLinks} ${
-                mobile ? styles.navMobileLinksWidth : ''
-              }`}
-            >
-              <li className="home">
-                <a title="home" href="#!" onClick={() => handleLink('home')}>
-                  home
-                </a>
-              </li>
-              <li className="features">
-                <a
-                  title="skills"
-                  href="#!"
-                  onClick={() => handleLink('features')}
-                >
-                  skills
-                </a>
-              </li>
-              <li className="portfolio">
-                <a
-                  title="portfolio"
-                  href="#!"
-                  onClick={() => handleLink('portfolio')}
-                >
-                  portfolio
-                </a>
-              </li>
-              <li className="about">
-                <a
-                  title="about me"
-                  href="#!"
-                  onClick={() => {
-                    setMobile(false);
-                    setModal(true);
-                  }}
-                >
-                  about me
-                </a>
-              </li>
-              <li className="recommendations">
-                <a
-                  title="recommendations"
-                  href="#!"
-                  onClick={() => handleLink('clients')}
-                >
-                  Recommendations
-                </a>
-              </li>
-              <li className="blog">
-                <a title="blog" href="#!" onClick={() => handleLink('blog')}>
-                  blog
-                </a>
-              </li>
-              <li className="contact">
-                <a
-                  title="contact"
-                  href="#!"
-                  onClick={() => handleLink('contact')}
-                >
-                  contact
-                </a>
-              </li>
-              <li>
-                <a title="settings" href="#!" onClick={() => handleOpen()}>
-                  <i className={styles.cogBtn} title="Theme Config" />
-                </a>
-              </li>
-
-              {isReadyForInstall ? (
-                <li>
-                  <button
-                    className={styles.homeBtn}
-                    type="button"
-                    onClick={() => downloadApp(true)}
-                  >
-                    Install App
-                  </button>
-                </li>
-              ) : (
-                <li>
-                  <button
-                    className={styles.homeBtn}
-                    type="button"
-                    onClick={() => {
-                      setMobile(false);
-                      setModal(true);
-                    }}
-                  >
-                    SEE MORE
-                  </button>
-                </li>
-              )}
-            </ul>
-          )}
-
+          {/* Mobile toggle button */}
           <button
             className={mobile ? styles.closeBtn : styles.openBtn}
             onClick={toggleMobileNav}

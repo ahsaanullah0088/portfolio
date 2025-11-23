@@ -1,33 +1,27 @@
-# **ANTONIO AYOLA PORTAFOLIO**
+# **Ahsaan Ullah Portfolio**
 
-Este proyecto es mi portafolio profesional donde muestro mis skills, que experiencia tengo y en que me estoy especializando.
+This project is my professional portfolio where I showcase my skills, experience, and areas of specialization.
 
-Este portafolio es una PWA, asi que puedes instalar la aplicacion en tu dispositivo.
+This portfolio is a PWA (Progressive Web App), so you can also install it on your device.
 
-## **CAPTURAS**
+## **SCREENSHOTS**
 
-![img](src/assets/logo_fondo_blanco_4.webp)
-
-![img](src/assets/portafolio/portafolio.webp)
-![img](src/assets/portafolio/portafolioBlack.webp)
 
 ## **DEMO**
 
-Puede ver el demo de este haciendo click [aquí](https://antonioayola.netlify.app/).
+You can check the live demo by clicking [here](https://antonioayola.netlify.app/).
 
-## **TECNOLOGIAS**
-
-Para el portafolio utilice las siguientes tecnologias:
+## **TECHNOLOGIES**
 
 - ReactJS
-- Modules CSS
+- CSS Modules
 - Netlify
 - PWA
 
-## **USO**
+## **USAGE**
 
-Para usar este proyecto:
+To run this project locally:
 
-- Clonar repositorio: ` git clone https://github.com/Tono2007/portafolio.git`
-- Instalar dependencias: `npm install` o` yarn install`
-- Ejecutarlo: `npm start` o ` yarn start`
+- Clone the repository: `git clone https://github.com/ahsaanullah0088/portfolio`
+- Install dependencies: `npm install` or `yarn install`
+- Run the project: `npm start` or `yarn start`

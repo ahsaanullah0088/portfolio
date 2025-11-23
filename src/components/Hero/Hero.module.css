@@ -16,6 +16,27 @@
   width: 55%;
   margin-right: 5%;
 }
+.downloadBtn {
+  composes: btnShadow from global;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--contrastBackground);
+  color: var(--textPrimary);
+  font-weight: 600;
+  height: 3.125rem;
+  border-radius: 0.625rem;
+  text-decoration: none;
+  transition: 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.downloadBtn:hover {
+  background-color: var(--primaryColor);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+
 
 .hero .heroLeft h4 {
   font-weight: 100;
