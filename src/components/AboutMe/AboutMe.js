@@ -88,28 +88,28 @@ function Experience() {
           </p>
           <ul>
             <li>
-              Transformed UI/UX designs into fully functional, responsive web
-              applications using modern frontend technologies.
+              I was responsible for transforming UI/UX designs into fully
+              functional, responsive web applications using Tailwind CSS and
+              Material UI. I ensured seamless dynamic data flow by building
+              reusable data-fetching logic, normalizing API responses, managing
+              global and local state with React hooks, and optimizing re-renders
+              using useMemo and dependency-based updates.
             </li>
             <li>
-              Collaborated closely with designers and backend teams to ensure
-              seamless API integration and dynamic data flow.
+              My role included implementing secure payment gateways such as
+              Stripe, FasyPay, and Google Pay, optimizing RESTful APIs, and
+              managing application state using useReducer and useState for a
+              seamless user experience. I also contributed to building and
+              debugging features, and deploying production-ready applications on
+              Vercel, AWS, Netlify, and Render.
             </li>
             <li>
               Implemented secure payment gateways (Stripe, PayPal), advanced
               form validations, cart systems, and admin features.
             </li>
             <li>
-              Optimized RESTful APIs and managed state handling for smooth and
-              efficient user experiences.
-            </li>
-            <li>
               Worked with APIs including Cloudinary (image upload), Nodemailer
               (email), and Google Maps (location).
-            </li>
-            <li>
-              Contributed to debugging features, improving application
-              performance, and deploying production-ready solutions.
             </li>
           </ul>
         </div>
