@@ -106,7 +106,7 @@ function Hero() {
                   rel="noreferrer noopener"
                   aria-label="Download Resume"
                 >
-                  Resume
+                  <b>Resume</b>
                 </a>
               </div>
             </div>
