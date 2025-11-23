@@ -5,7 +5,7 @@ export const constants = {
     linkedin: 'https://www.linkedin.com/in/ahsaan-ullah-769172253/',
     github: 'https://github.com/ahsaanullah0088',
     email: 'ahsaanu70@gmail.com',
-    cv: '/04/03/2022.pdf',
+    cv: 'https://drive.google.com/file/d/1QNR1a9FiCJzcBn1t2Lmf2-YRoA6-WRgU/view?usp=sharing',
     twitter: 'https://twitter.com/ahsaanullah0088',
     number: '+923257175094',
     whatsapp: 'https://wa.me/923257175094',
@@ -22,27 +22,6 @@ export const constants = {
   cursos: {
     DevWeekends:
       'https://drive.google.com/file/d/1drp31yVaDWfrtYwiDeJW4qGFbKjLTFSM/view?usp=sharing',
-    inglesB1:
-      'https://drive.google.com/file/d/1UY3Q3zcZI4OoRFyfLIVFZaJb2qCRIkPm/view?usp=sharing',
-    inglesC1: 'https://www.efset.org/cert/7oD4Fh',
-    ingSoftware:
-      'https://drive.google.com/file/d/1X-8ZCh0IoXh4Qup_sWYPSkaVnyisXjKI/view?usp=sharing',
-    frontendDeveloper:
-      'https://platzi.com/p/AntonioAyola/curso/2467-frontend-developer/diploma/detalle/',
-    scrumStudy:
-      'https://www.scrumstudy.com/certification/verify?type=SFC&number=962492',
-    scrum:
-      'https://www.linkedin.com/learning/certificates/5a305bf06cee89fba7ca237afc285ba9138b7a4fcbfee0145d6b4e0bdaf41f7e',
-    ingDeSoftware:
-      'https://platzi.com/p/AntonioAyola/curso/1098-ingenieria/diploma/detalle/',
-    algoritmosPensamientoLogico:
-      'https://platzi.com/p/AntonioAyola/curso/2218-pensamiento-logico/diploma/detalle/',
-    computacionBasica:
-      'https://platzi.com/p/AntonioAyola/curso/1741-computacion-basica-2019/diploma/detalle/',
-    introduccionAPIRest: 'https://ed.team/@antonioayola/curso/api-rest',
-    git: 'https://www.udemy.com/certificate/UC-0c57c4a0-ee62-47a0-a349-b8feccc4dcc6/',
-    noCountry:
-      'https://drive.google.com/file/d/1T1MNROvwBrDLYxlMnpYfEmKXs7Rtc7Go/view?usp=share_link',
   },
   language: 'es_mx',
   siteData: {

@@ -1,4 +1,5 @@
 import { useState, lazy, Suspense, useEffect } from 'react';
+import { FaLinkedin, FaGithub, FaWhatsapp } from 'react-icons/fa';
 import scrollTop from '../../utils/helpers/scrollTop';
 import useToggle from '../../utils/hooks/useToggle';
 import useScrollInto from '../../utils/hooks/useScrollInto';
@@ -7,9 +8,18 @@ import useScrollSpy from '../../utils/hooks/useScrollSpy';
 import logo1 from '../../assets/Logo.png';
 import styles from './Header.module.css';
 import Loader from '../Loader';
-// eslint-disable-next-line import/newline-after-import
 import Modal from '../Modal/Modal';
+// eslint-disable-next-line import/newline-after-import
+import { constants } from '../../utils/constants';
 const ModalConfig = lazy(() => import('./ModalConfig'));
+
+const socialIcons = {
+  linkedin: FaLinkedin,
+  github: FaGithub,
+  whatsapp: FaWhatsapp,
+};
+
+const socialLinks = ['linkedin', 'github', 'whatsapp'];
 
 const Header = () => {
   const { open, handleOpen, handleClose } = useToggle();
@@ -20,58 +30,48 @@ const Header = () => {
   useScrollSpy();
 
   useEffect(() => {
-    function handleScroll() {
+    const handleScroll = () => {
       setMobile(false);
-      window.scrollY > 100 ? setActiveNav(true) : setActiveNav(false);
-    }
-    window.addEventListener('scroll', handleScroll);
+      setActiveNav(window.scrollY > 100);
+    };
 
-    function handlePWAInit(event) {
-      console.log('👍', 'beforeinstallprompt', event);
+    const handlePWAInit = (event) => {
       window.deferredPrompt = event;
       setIsReadyForInstall(true);
-    }
+    };
 
+    window.addEventListener('scroll', handleScroll);
     window.addEventListener('beforeinstallprompt', handlePWAInit);
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('beforeinstallprompt', handlePWAInit);
     };
   }, []);
 
-  const toggleMobileNav = () => {
-    setMobile(!mobile);
-  };
-
-  const removeMobileNav = () => {
-    setMobile(false);
-  };
-
+  const toggleMobileNav = () => setMobile(!mobile);
+  const removeMobileNav = () => setMobile(false);
   const handleLink = (section) => {
     removeMobileNav();
     scrollTo(section);
   };
 
-  async function downloadApp() {
-    console.log('👍', 'install-button-clicked');
+  const downloadApp = async () => {
     const promptEvent = window.deferredPrompt;
-    if (!promptEvent) {
-      console.log('No saved prompt event found');
-      return;
-    }
+    if (!promptEvent) return;
     promptEvent.prompt();
     const result = await promptEvent.userChoice;
-    console.log('👍', 'userChoice', result);
     window.deferredPrompt = null;
     setIsReadyForInstall(false);
-  }
+    console.log('Install result:', result);
+  };
 
   return (
     <>
       <Suspense fallback={<Loader />}>
         <Modal
           openModal={open}
-          fnCloseModal={() => handleClose()}
+          fnCloseModal={handleClose}
           styleOverlay={styles.modalContentConfigOverlay}
         >
           <ModalConfig />
@@ -92,11 +92,6 @@ const Header = () => {
 
           {/* Desktop nav */}
           <ul className={styles.navLinks}>
-            <li className="home">
-              <a title="home" href="#!" onClick={() => handleLink('home')}>
-                home
-              </a>
-            </li>
             <li className="about">
               <a title="about me" href="#!" onClick={() => handleLink('about')}>
                 about me
@@ -129,11 +124,6 @@ const Header = () => {
                 recommendations
               </a>
             </li>
-            <li className="blog">
-              <a title="blog" href="#!" onClick={() => handleLink('blog')}>
-                blog
-              </a>
-            </li>
             <li className="contact">
               <a
                 title="contact"
@@ -143,23 +133,42 @@ const Header = () => {
                 contact
               </a>
             </li>
+
+            {/* Modal Settings */}
             <li>
-              <a title="settings" href="#!" onClick={() => handleOpen()}>
+              <a title="settings" href="#!" onClick={handleOpen}>
                 <i className={styles.cogBtn} title="Theme Config" />
               </a>
             </li>
 
-            {isReadyForInstall ? (
-              <li>
-                <button
-                  className={styles.homeBtn}
-                  type="button"
-                  onClick={() => downloadApp(true)}
-                >
-                  Install App
-                </button>
-              </li>
-            ) : null}
+            {/* Resume button */}
+            <li>
+              <a
+                className={styles.homeBtn}
+                href={constants.profilesUrls.cv}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Resume
+              </a>
+            </li>
+
+            {/* Social icons */}
+            {socialLinks.map((key) => {
+              const Icon = socialIcons[key];
+              return (
+                <li key={key}>
+                  <a
+                    href={constants.profilesUrls[key]}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title={key}
+                  >
+                    <Icon size={24} />
+                  </a>
+                </li>
+              );
+            })}
           </ul>
 
           {/* Mobile nav */}
@@ -168,9 +177,9 @@ const Header = () => {
               mobile ? styles.navMobileLinksWidth : ''
             }`}
           >
-            <li className="home">
-              <a title="home" href="#!" onClick={() => handleLink('home')}>
-                home
+            <li className="about">
+              <a title="about me" href="#!" onClick={() => handleLink('about')}>
+                about me
               </a>
             </li>
             <li className="features">
@@ -191,23 +200,13 @@ const Header = () => {
                 portfolio
               </a>
             </li>
-            <li className="about">
-              <a title="about me" href="#!" onClick={() => handleLink('about')}>
-                about me
-              </a>
-            </li>
-            <li className="recommendations">
+            <li className="clients">
               <a
                 title="recommendations"
                 href="#!"
                 onClick={() => handleLink('clients')}
               >
                 recommendations
-              </a>
-            </li>
-            <li className="blog">
-              <a title="blog" href="#!" onClick={() => handleLink('blog')}>
-                blog
               </a>
             </li>
             <li className="contact">
@@ -219,23 +218,55 @@ const Header = () => {
                 contact
               </a>
             </li>
+
+            {/* Modal Settings */}
             <li>
-              <a title="settings" href="#!" onClick={() => handleOpen()}>
+              <a title="settings" href="#!" onClick={handleOpen}>
                 <i className={styles.cogBtn} title="Theme Config" />
               </a>
             </li>
 
-            {isReadyForInstall ? (
+            {/* Resume */}
+            <li>
+              <a
+                className={styles.homeBtn}
+                href={constants.profilesUrls.cv}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Resume
+              </a>
+            </li>
+
+            {/* Social icons */}
+            {socialLinks.map((key) => {
+              const Icon = socialIcons[key];
+              return (
+                <li key={key}>
+                  <a
+                    href={constants.profilesUrls[key]}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title={key}
+                  >
+                    <Icon size={24} />
+                  </a>
+                </li>
+              );
+            })}
+
+            {/* PWA install */}
+            {isReadyForInstall && (
               <li>
                 <button
                   className={styles.homeBtn}
                   type="button"
-                  onClick={() => downloadApp(true)}
+                  onClick={downloadApp}
                 >
                   Install App
                 </button>
               </li>
-            ) : null}
+            )}
           </ul>
 
           {/* Mobile toggle button */}
@@ -244,7 +275,6 @@ const Header = () => {
             onClick={toggleMobileNav}
             type="button"
             title="Open Side Menu"
-            name="Open Side Menu"
           >
             <i
               className={
