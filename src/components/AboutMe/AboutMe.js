@@ -16,14 +16,8 @@ function About() {
         production-ready solutions using modern engineering practices and clean
         architectures.
         <br />
-        <br />
-        I’ve engineered products like the Beach Resort App with a smooth booking
-        experience, PeakPoint Properties for real estate workflows, and multiple
-        e-commerce platforms with secure authentication, optimized dashboards,
-        and fast, responsive interfaces. I’ve also delivered end-to-end payment
-        integrations for businesses, helping them deploy Stripe, Shopify
-        gateways, and custom payment flows.
-        <br />
+        I’ve also delivered end-to-end payment integrations for businesses,
+        helping them deploy Stripe, Shopify gateways, and custom payment flows.
         <br />
         One of my most impactful builds is <strong>Eshop</strong>, a multivendor
         Ecommerce platform featuring real-time communication, socket-based chat,
@@ -32,19 +26,16 @@ function About() {
         Generator App built with modern web technologies, scalable APIs, and
         Cloudinary-based media pipelines.
         <br />
-        <br />
         To strengthen my problem-solving mindset, I’ve completed
         <strong> 150+ LeetCode problems in C++ </strong>, focusing on
         algorithms, data structures, optimization patterns, and system-level
         thinking.
-        <br />
         <br />
         Beyond engineering, I actively contribute to the tech community as an
         MLSA Beta Ambassador, UEIT Society Marketing Lead, Dev Weekends Core
         Member, and mentor in web development and DSA. I’ve helped organize
         conferences, hackathons, and bootcamps with MLSA-UE, GDSC-UE, and UEIT
         Society— empowering students to learn, collaborate, and innovate.
-        <br />
         <br />
         Across everything I build, my goal remains simple: to engineer systems
         that are scalable, seamless, and built with purpose—transforming complex
@@ -57,15 +48,9 @@ function About() {
 function Education() {
   return (
     <div className={styles.educationSection}>
-      <h2>Software Engineering (2015-2019) (Degree Obtained)</h2>
-      <h4>Polytechnic University of Pachuca</h4>
-      <span>
-        Polytechnic University of Pachuca - Pachuca – Ciudad Sahagún Highway
-        Km.20, Ex-Hacienda de Santa Bárbara, 43830
-      </span>
-      <p>
-        Studied the Software Engineering career, learning various programming
-      </p>
+      <h2>BSIT (2022-2026) (Continue)</h2>
+      <h4>University of Education</h4>
+      <span>University of Education - Township,Lahore,Pakistan</span>
     </div>
   );
 }
@@ -77,160 +62,59 @@ function Studies() {
       <ul className={styles.studiesContainer}>
         <li>
           <a
-            title="English Certificate"
+            title="Silver Certificate"
             target="_blank"
             rel="noreferrer noopener"
-            href={constants.cursos.inglesB1}
+            href={constants.cursos.DevWeekends}
           >
-            • English B1 CEFR - CENLEX IPN - January 11, 2022
-          </a>
-        </li>
-        <li>
-          <a
-            title="Software Engineering Degree"
-            target="_blank"
-            rel="noreferrer noopener"
-            href={constants.cursos.ingSoftware}
-          >
-            • Software Engineering Degree - UPP - January 17, 2020
-          </a>
-        </li>
-        <li>
-          <a
-            title="Platzi Profile"
-            target="_blank"
-            rel="noreferrer noopener"
-            href="https://platzi.com/p/AntonioAyola/"
-          >
-            • Platzi Profile
-          </a>
-        </li>
-        <li>
-          <a
-            title="English C1 Certificate"
-            target="_blank"
-            rel="noreferrer noopener"
-            href={constants.cursos.inglesC1}
-          >
-            • EF SET English Certificate 70/100 (C1 Advanced) - EF SET 2022
-          </a>
-        </li>
-        <li>
-          <a
-            title="Scrum Certificate"
-            target="_blank"
-            rel="noreferrer noopener"
-            href={constants.cursos.scrumStudy}
-          >
-            • Scrum Fundamentals Certified - SCRUMstudy - January 29, 2023
-          </a>
-        </li>
-        <li>
-          <a
-            title="NoCountry Certificate"
-            target="_blank"
-            rel="noreferrer noopener"
-            href={constants.cursos.noCountry}
-          >
-            • No Country - Seleccionado7 - May 1, 2023
-          </a>
-        </li>
-        <li>
-          <a
-            title="Frontend Certificate"
-            target="_blank"
-            rel="noreferrer noopener"
-            href={constants.cursos.frontendDeveloper}
-          >
-            • Frontend Developer Course - Platzi
-          </a>
-        </li>
-        <li>
-          <a
-            title="Scrum Certificate"
-            target="_blank"
-            rel="noreferrer noopener"
-            href={constants.cursos.scrum}
-          >
-            • Scrum Course - LinkedIn
-          </a>
-        </li>
-        <li>
-          <a
-            title="Software Engineering Fundamentals"
-            target="_blank"
-            rel="noreferrer noopener"
-            href={constants.cursos.ingDeSoftware}
-          >
-            • Software Engineering Fundamentals - Platzi
-          </a>
-        </li>
-        <li>
-          <a
-            title="Algorithms Course"
-            target="_blank"
-            rel="noreferrer noopener"
-            href={constants.cursos.algoritmosPensamientoLogico}
-          >
-            • Algorithms & Logical Thinking - Platzi
-          </a>
-        </li>
-        <li>
-          <a
-            title="Basic Computing"
-            target="_blank"
-            rel="noreferrer noopener"
-            href={constants.cursos.computacionBasica}
-          >
-            • Basic Computing Course - Platzi
-          </a>
-        </li>
-        <li>
-          <a
-            title="API REST Course"
-            target="_blank"
-            rel="noreferrer noopener"
-            href={constants.cursos.introduccionAPIRest}
-          >
-            • Intro to API REST - EDTeam
-          </a>
-        </li>
-        <li>
-          <a
-            title="GIT Certificate"
-            target="_blank"
-            rel="noreferrer noopener"
-            href={constants.cursos.git}
-          >
-            • GIT Course - Udemy
+            • Full Stack Development - DevWeekends - September 17, 2025
           </a>
         </li>
       </ul>
     </>
   );
 }
-
-function CV() {
-  return (
-    <>
-      <h2>Private CV</h2>
-      <p>Go to the contact section.</p>
-      <button type="button" className="boxShadow" disabled>
-        DOWNLOAD CV
-      </button>
-    </>
-  );
-}
-
 function Experience() {
   return (
-    <>
-      <h2>Private</h2>
-      <p>Go to the contact section.</p>
-      <button type="button" className="boxShadow" disabled>
-        Timeline...
-      </button>
-    </>
+    <section className="experienceSection">
+      <h2 className="title">Experience</h2>
+
+      <div className="aboutContainer">
+        <div className="AboutRight">
+          <h3>Associate Software Engineer (MERN)</h3>
+          <p>
+            <strong>Infini Studio</strong> | Jun '25 — Sep '25 | Lahore,
+            Pakistan (Remote)
+          </p>
+          <ul>
+            <li>
+              Transformed UI/UX designs into fully functional, responsive web
+              applications using modern frontend technologies.
+            </li>
+            <li>
+              Collaborated closely with designers and backend teams to ensure
+              seamless API integration and dynamic data flow.
+            </li>
+            <li>
+              Implemented secure payment gateways (Stripe, PayPal), advanced
+              form validations, cart systems, and admin features.
+            </li>
+            <li>
+              Optimized RESTful APIs and managed state handling for smooth and
+              efficient user experiences.
+            </li>
+            <li>
+              Worked with APIs including Cloudinary (image upload), Nodemailer
+              (email), and Google Maps (location).
+            </li>
+            <li>
+              Contributed to debugging features, improving application
+              performance, and deploying production-ready solutions.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -263,7 +147,7 @@ function AboutMe() {
                   className={styles.tabBtn}
                   aria-label="education"
                 >
-                  education
+                  Education
                 </button>
               </li>
 
@@ -288,17 +172,6 @@ function AboutMe() {
                   experience
                 </button>
               </li>
-
-              <li className={activeSection === 5 ? styles.active : null}>
-                <button
-                  type="button"
-                  onClick={() => setActiveSection(5)}
-                  className={styles.tabBtn}
-                  aria-label="cv"
-                >
-                  CV
-                </button>
-              </li>
             </ul>
             <hr />
           </div>
@@ -308,7 +181,6 @@ function AboutMe() {
             {activeSection === 2 && <Education />}
             {activeSection === 3 && <Studies />}
             {activeSection === 4 && <Experience />}
-            {activeSection === 5 && <CV />}
           </div>
         </div>
       </div>
