@@ -42,24 +42,24 @@ It is fully responsive and scalable for real-world medical booking needs.`,
       page: 'https://yourdeploymentlink.com',
     },
   },
-//   {
-//     id: 101,
-//     year: '2023',
-//     date: '06/03/2023',
-//     category: 'COLLABORATION',
-//     title: 'DustBusters',
-//     image: 'dustBusters.webp',
-//     technologies: ['ReactJs', 'Typescript', 'Tailwind', 'Java', 'Spring Boot'],
-//     desc: `A collaborative project developed during No Country's cohort 8 over 5 weeks, with a team of 8. 
-// I worked as a frontend developer and gained valuable experience in teamwork and soft skills.
+  //   {
+  //     id: 101,
+  //     year: '2023',
+  //     date: '06/03/2023',
+  //     category: 'COLLABORATION',
+  //     title: 'DustBusters',
+  //     image: 'dustBusters.webp',
+  //     technologies: ['ReactJs', 'Typescript', 'Tailwind', 'Java', 'Spring Boot'],
+  //     desc: `A collaborative project developed during No Country's cohort 8 over 5 weeks, with a team of 8.
+  // I worked as a frontend developer and gained valuable experience in teamwork and soft skills.
 
-// The project is a cleaning service platform allowing clients to schedule and request cleaning services 
-// for homes or workplaces.`,
-//     links: {
-//       code: 'https://github.com/No-Country/c9-32-t-javareact',
-//       page: 'https://dust-busters.netlify.app',
-//     },
-//   },
+  // The project is a cleaning service platform allowing clients to schedule and request cleaning services
+  // for homes or workplaces.`,
+  //     links: {
+  //       code: 'https://github.com/No-Country/c9-32-t-javareact',
+  //       page: 'https://dust-busters.netlify.app',
+  //     },
+  //   },
   {
     id: 3,
     year: '2024',
@@ -216,41 +216,41 @@ Animations and transitions enhance user engagement.`,
       page: 'https://monumental-pegasus-1080a3.netlify.app/',
     },
   },
-//   {
-//     id: 102,
-//     year: '2023',
-//     date: '30/04/2023',
-//     category: 'COLLABORATION',
-//     title: 'CompraListo',
-//     image: 'compraListo.webp',
-//     technologies: ['ReactJs', 'JS', 'Tailwind', 'Java', 'Spring Boot'],
-//     desc: `A collaborative project built over 5 weeks with a team of 9 developers. 
-// I worked as a frontend developer.
+  //   {
+  //     id: 102,
+  //     year: '2023',
+  //     date: '30/04/2023',
+  //     category: 'COLLABORATION',
+  //     title: 'CompraListo',
+  //     image: 'compraListo.webp',
+  //     technologies: ['ReactJs', 'JS', 'Tailwind', 'Java', 'Spring Boot'],
+  //     desc: `A collaborative project built over 5 weeks with a team of 9 developers.
+  // I worked as a frontend developer.
 
-// The project is a web app for creating, saving, and sharing shopping lists. 
-// Users can access it from any device, share lists with family, generate PDFs, share via WhatsApp, and calculate expenses.`,
-//     links: {
-//       code: 'https://github.com/No-Country/s7-11-t-javareact',
-//       page: 'https://compralisto0.vercel.app/',
-//     },
-//   },
-//   {
-//     id: 103,
-//     year: '2023',
-//     date: '10/06/2023',
-//     category: 'COLLABORATION',
-//     title: 'Pigmeo',
-//     image: 'pigmeo.jpg',
-//     technologies: ['ReactJs', 'Typescript', 'JS', 'Tailwind'],
-//     desc: `A collaborative project completed over 5 weeks with a team of 12 developers. 
-// I worked as a frontend developer.
+  // The project is a web app for creating, saving, and sharing shopping lists.
+  // Users can access it from any device, share lists with family, generate PDFs, share via WhatsApp, and calculate expenses.`,
+  //     links: {
+  //       code: 'https://github.com/No-Country/s7-11-t-javareact',
+  //       page: 'https://compralisto0.vercel.app/',
+  //     },
+  //   },
+  //   {
+  //     id: 103,
+  //     year: '2023',
+  //     date: '10/06/2023',
+  //     category: 'COLLABORATION',
+  //     title: 'Pigmeo',
+  //     image: 'pigmeo.jpg',
+  //     technologies: ['ReactJs', 'Typescript', 'JS', 'Tailwind'],
+  //     desc: `A collaborative project completed over 5 weeks with a team of 12 developers.
+  // I worked as a frontend developer.
 
-// The app is a mobile-responsive finance management platform, allowing users to manage finances and transactions safely and quickly.`,
-//     links: {
-//       code: 'https://github.com/No-Country/s8-14-t-mern',
-//       page: 'https://pigmeo-app.netlify.app/',
-//     },
-//   },
+  // The app is a mobile-responsive finance management platform, allowing users to manage finances and transactions safely and quickly.`,
+  //     links: {
+  //       code: 'https://github.com/No-Country/s8-14-t-mern',
+  //       page: 'https://pigmeo-app.netlify.app/',
+  //     },
+  //   },
 ];
 
 export default data;
