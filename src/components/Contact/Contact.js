@@ -86,11 +86,11 @@ const Contact = () => {
                 width="300px"
                 height="400px"
                 src={me}
-                alt="Antonio Ayola Profile"
+                alt="Ahsaan Ullah Profile"
               />
             </div>
             <div className={styles.details}>
-              <h1>Juan Antonio Ayola Cortes</h1>
+              <h1>Juan Ahsaan Ullah Cortes</h1>
               <p>
                 I am available on almost all social networks. You can send me a
                 message, and I will respond within 24 hours. You can always

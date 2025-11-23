@@ -147,7 +147,7 @@ console.log(familiaCompleta)
 
 Originalmente teníamos **var** que funcionaba de forma global.
 
-`var` Declara una variable de scope global o local para la función, sin importar el ámbito de bloque.
+`var` Declara una variable de scope global o local para la función, sin imPortr el ámbito de bloque.
 Permite **Hoisting.**  
 `let` Declara una variable de scope global, local para la función o de bloque. Es reasignable y no permite **Hoisting**. `let` Declara variables que sólo son accesibles desde el Scope de la función. A diferencia de `var` que es una variable global.
 
@@ -575,7 +575,7 @@ Promise.allSettled(promises).then((results) =>
 
 ### ES11 globalThis
 
-Hace referencia al objeto global, sin importar el contexto en el que se encuentre tu código. Esto cambia dependiendo el entorno en el que se esté ejecutando el código, pues en node.js , el objeto `global` es global, en web workers es `self` y en el navegador es `window`.
+Hace referencia al objeto global, sin imPortr el contexto en el que se encuentre tu código. Esto cambia dependiendo el entorno en el que se esté ejecutando el código, pues en node.js , el objeto `global` es global, en web workers es `self` y en el navegador es `window`.
 
 ```js
 console.log(window);

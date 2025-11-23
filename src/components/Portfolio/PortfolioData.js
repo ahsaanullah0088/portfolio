@@ -3,250 +3,232 @@ const CATEGORIES = [
   'WEB DESIGN',
   'APPLICATION',
   'DESIGN',
-  'MOBILE',
-  'COLABORATION',
+  'FRONTEND',
+  'COLLABORATION',
 ];
 
 const data = [
   {
     id: 1,
-    year: '2022',
-    date: '16/3/2022',
-    category: 'WEB DESIGN',
-    title: 'Mi Portafolio',
-    image: 'portafolio.webp',
-    technologies: [
-      'PWA',
-      'React',
-      'CSS Modules',
-      'Responsive',
-      'Neumorphism',
-      'Netlify',
-      'Markdown',
-      'HTML',
-      'JS',
-      'react-transition-group',
-      'Formspree',
-      'Eslint',
-      'Prettier',
-    ],
-    desc: `Mi sitio web personal estilo Neumorfismo.
-     Este proyecto me tomo mucho trabajo solo para poder expresar lo que hago y lo que me gusta hacer. 
-     Este portafolio es una PWA, asi que puedes instalar la aplicacion en tu dispositivo.
-    
-     Ademas viene con un pequeño blog usando markdown. Espero que te guste <3.`,
-    links: {
-      code: 'https://github.com/Tono2007/portafolio',
-      page: 'https://antonioayola.netlify.app/',
-    },
-  },
-  {
-    id: 2,
-    year: '2022',
-    date: '21/3/2022',
-    category: 'DEVELOPMENT',
-    title: 'Cars Landing Page',
-    image: 'carsLandingPage.webp',
-    technologies: [
-      'Webpack',
-      'Yarn',
-      'Sass(scss)',
-      'Babel',
-      'BEM',
-      'SwiperJs',
-      'Github Pages',
-      'Github Actions',
-      'Responsive',
-      'HTML',
-      'CSS',
-      'JS',
-    ],
-    desc: `Este proyecto es una landing page con tematica de carros algo simple, me sirvio principalmente para practicar y entender mejor webpack, antes de pasar a esbuild con Vite D:
-    también para ver como funciona sass junto con la metodologia BEM, implementar un efecto parallax de otra manera y un slider con SwiperJs.
-    Esta vez lo subi a Github Pages, usando github actions, creando un pequeño workflow que crea el build y lo mueve a la rama de gh-pages para el deploy.`,
-    links: {
-      code: 'https://github.com/Tono2007/CarsLandingPage',
-      page: 'https://tono2007.github.io/CarsLandingPage/',
-    },
-  },
-  {
-    id: 3,
-    year: '2022',
-    date: '10/4/2022',
+    year: '2024',
+    date: '12/01/2025',
     category: 'APPLICATION',
-    title: 'MoviesApp',
-    image: 'movieApp.webp',
+    title: 'Prescripto – Doctor Appointment App',
+    image: 'prep1.png',
     technologies: [
-      'ReactJs',
-      'Material-ui (MUI)',
-      'HTML',
-      'CSS',
-      'JS',
-      'SwiperJs',
-      'Vercel',
-      'Responsive',
-      'TMBD',
-      'Axios',
-      'Moment',
-      'react-router-dom',
-    ],
-    desc: `Este proyecto es un sitio web para navegar entre peliculas y ver detalles de cada una. 
-    Ayudandonos de material-ui(mui) para el diseño y la API de TheMovieDataBase TMDB para obtener información de las peliculas.
-    Fue un proyecto complicado, por el manejo de los datos, principalmente la seccion del buscador; ademas de que el diseño fue completamente pensado por mi.
-    Te permite iniciar sesión con tu cuenta de TMDB y agregar peliculas a tus favoritos, calificarlas o marcarlas como vistas.
-    Falta terminar la pestaña de actores y series que seria muy parecida a la de peliculas.
-    El despliegue del sitio esta en vercel, se guarda la clave de la api en variables de ambiente.
-    Me gustaria aprender y mejorar el rendimiento en este proyecto
-    `,
-    links: {
-      code: 'https://github.com/Tono2007/Movies-App',
-      page: 'https://movies-app-tono2007.vercel.app',
-    },
-  },
-  {
-    id: 4,
-    year: '2022',
-    date: '04/5/2022',
-    category: 'WEB DESIGN',
-    title: 'LOL-APP',
-    image: 'lolApp.webp',
-    technologies: [
-      'ReactJs',
-      'Styled-Components',
-      'HTML',
-      'CSS',
-      'JS',
-      'GSAP',
-      'Netlify',
-      'Responsive',
-      'Riot API',
-      'Axios',
-    ],
-    desc: `Este proyecto es una aplicación para consultar jugadores y detalles de los campeones del juego.
-    Ocupando Styled Components para el diseño y la API de RIOT para obtener información de los jugadores.
-    Este proyecto fue práctica para aprender Styled Components y la biblioteca GSAP para las animaciones.
-    La clave que tengo para acceder a la api de riot es limitada, en cuanto numero de peticiones y el tiempo que estara activa, puede presentar errores antes que genere otra.
-    El despliegue del sitio esta en Netlify.
-    `,
-    links: {
-      code: null,
-      //page: 'https://lol-app.netlify.app/',
-      page: 'https://master--lol-app.netlify.app/',
-    },
-  },
-  {
-    id: 5,
-    year: '2022',
-    date: '05/11/2022',
-    category: 'WEB DESIGN',
-    title: 'Pokedex',
-    image: 'pokedex.webp',
-    technologies: [
-      'NextJs',
-      'ReactJs',
+      'React.js',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'JWT Auth',
+      'Stripe',
+      'Razorpay',
       'Tailwind',
-      'HTML',
-      'CSS',
-      'JS',
-      'PropTypes',
-      'Pokeapi',
-      'Vercel',
-      'Responsive',
       'Axios',
+      'Vercel',
+      'REST API',
     ],
-    desc: `La típica aplicación pokedex que todos hacen, principalmente para practicar nextjs y tener mi primer acercamiento con tailwind y testing.
-    Muestra, busca y guarda tus pokemones ademas de secciones como generaciones y tipos.
-    Puedes encontrar imagenes, nombres y detalles de cada pokemon.
-    Me senti muy comodo con tailwind, el diseño fue totalmente creado por mi.
-    Ante la duda de agregar typescript ocupé proptypes para los tipos de datos.
-    El despliegue del sitio esta en Vercel.`,
-    links: {
-      code: 'https://github.com/Tono2007/pokedex',
-      page: 'https://pokedex-tono2007.vercel.app/',
-    },
-  },
-  {
-    id: 6,
-    year: '2022',
-    date: '11/11/2022',
-    category: 'APPLICATION',
-    title: 'React-Libs',
-    image: 'reactLibs.webp',
-    technologies: ['ReactJs', 'JS', 'Docusaurus ', 'Vercel', 'Responsive'],
-    desc: `Para este proyecto queria intentar generar una documentación, me encontre con varias herramientas que ya se encargan de un desarrollo rapido para centrarnos en el contenido.
-    Se eligío Docusaurus 2, un moderno generador de sitios estaticos, especializado en documentación ademas de estar construido con React.
-    
-    Utilizando el preset(classic) de Docusaurus fue muy sencillo generar la estructura de documentación. Se puede personalizar el diseño, crear tus componentes y seguir ocupando React, ademas que el contenido se escribe en mdx.
+    desc: `Prescripto is a full-stack doctor appointment web application built using the MERN stack. 
+It supports three roles — Patient, Doctor, and Admin — each with a personalized dashboard. 
+Patients can book appointments, make online payments, and manage their profiles. 
+Doctors can manage schedules, view bookings, and update availability. 
+Admins can manage doctors, appointments, and see complete analytics.
 
-    El tema que se escogio para llenar con algo fue generar una base de datos con información util, consejos, guias en el uso de React.
-    Este proyecto fue muy sencillo, el proposito solo fue agregar una herramienta mas a mis conocimientos que en algun momento puede ser util.
-    `,
+The app includes secure JWT authentication, an intuitive UI, appointment scheduling, 
+profile management, and full payment integration via Stripe and Razorpay. 
+It is fully responsive and scalable for real-world medical booking needs.`,
     links: {
-      code: 'https://github.com/Tono2007/React-Libs',
-      page: 'https://react-libs.vercel.app/',
-    },
-  },
-  {
-    id: 7,
-    year: '2023',
-    date: '21/05/2023',
-    category: 'WEB DESIGN',
-    title: 'Slim Mui Template',
-    image: 'slimMuiTemplate.webp',
-    technologies: [
-      'ReactJs',
-      'JS',
-      'MUI ',
-      'Dashboard Template',
-      'Netlify',
-      'Responsive',
-    ],
-    desc: `Se trata de una plantilla construida con material-ui(MUI), puede ser usada para construir un panel administrador, analíticas, red social, etc.
-
-    Viene con muchos componentes y paginas demo preconstruidas reutilizables, cuenta con modo oscuro, responsive, code splitting y aliases por defecto. Por gusto personal agregue las guías de airbnb para el linter, pero puede ser cambiado.
-    
-    Guiándome  de otras platillas que usan las mismas tecnologías  genere una estructura de carpetas sencilla de usar, también viene con una versión  limpia que contiene solamente los componentes y estilos para empezar un nuevo proyecto rápidamente.
-    
-    Este proyecto me tomo casi 3 meses para la versión 1.0.0 y fue casi puro diseño, pude aprender a generar una versión y liberarla en las releases de github.
-    
-    En un futuro con tiempo podría agregar más componentes y páginas, además generar una mejor documentación y trabajar en las versiones de typescript, Next, CRA y Remix.
-    Este proyecto sé que me será útil también para uso personal cuando me soliciten algo similar.
-         `,
-    links: {
-      code: 'https://github.com/Tono2007/slim-free-react-mui-template',
-      page: 'https://slim-free-react-mui-template.netlify.app/',
+      code: 'https://github.com/yourusername/prescripto',
+      page: 'https://yourdeploymentlink.com',
     },
   },
   {
     id: 101,
     year: '2023',
     date: '06/03/2023',
-    category: 'COLABORATION',
+    category: 'COLLABORATION',
     title: 'DustBusters',
     image: 'dustBusters.webp',
-    technologies: ['ReactJs', 'Typescript', 'Tailwind ', 'Java', 'Spring Boot'],
-    desc: `Proyecto colaborativo desarrollado durante el cohorte8 de No Country, simulación de entorno de trabajo con duranción de 5 semanas, con un equipo de 8 personas donde participe como frontend developer consiguiendo un avance satisfactorio.
-    Buenisimo para mejorar abilidades blandas y hacer amistades nuevas.
+    technologies: ['ReactJs', 'Typescript', 'Tailwind', 'Java', 'Spring Boot'],
+    desc: `A collaborative project developed during No Country's cohort 8 over 5 weeks, with a team of 8. 
+I worked as a frontend developer and gained valuable experience in teamwork and soft skills.
 
-    El proyecto consistió en Una plataforma de servicio de limpieza que permita a los clientes solicitar y programar servicios de limpieza en su hogar o lugar de trabajo. 
-    `,
+The project is a cleaning service platform allowing clients to schedule and request cleaning services 
+for homes or workplaces.`,
     links: {
       code: 'https://github.com/No-Country/c9-32-t-javareact',
       page: 'https://dust-busters.netlify.app',
     },
   },
   {
+    id: 3,
+    year: '2024',
+    date: '23/11/2024',
+    category: 'APPLICATION',
+    title: 'Eshop – Multi-Vendor Platform',
+    image: 'eshop.png',
+    technologies: [
+      'React.js',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'Redux',
+      'Tailwind CSS',
+      'Axios',
+      'Stripe',
+      'JWT Auth',
+      'Vercel',
+      'WebSockets',
+      'Cloudinary',
+    ],
+    desc: `Eshop is a complete multi-vendor e-commerce platform connecting buyers, sellers, and admins. 
+It features multi-role dashboards, product management, real-time messaging, notifications, and analytics.
+
+Buyers can browse products, filter/search items, add to cart, and checkout securely.
+Sellers manage products, track sales, handle orders, and access insights.
+Admins manage users, products, and monitor platform activity.
+
+Built with React.js, Node.js, Express.js, MongoDB, Redux, and Tailwind CSS, 
+it includes JWT authentication, Stripe payments, Cloudinary for image uploads, and WebSockets for messaging. 
+Deployed on Vercel.`,
+    links: {
+      code: 'https://github.com/ahsaanullah0088/Multivendor-MERN',
+      page: 'https://client-eight-coral.vercel.app/',
+    },
+  },
+  {
+    id: 2,
+    year: '2024',
+    date: '23/09/2024',
+    category: 'APPLICATION',
+    title: 'Video Conferencing App',
+    image: 'zoom1.png',
+    technologies: [
+      'React.js',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'Clerk Auth',
+      'Tailwind',
+      'MUI',
+      'Axios',
+      'Vercel',
+      'Netlify',
+      'REST API',
+    ],
+    desc: `A full-featured video conferencing web application (Zoom Clone) built with the MERN stack. 
+Key features include user authentication via Clerk, creating and joining meetings, personal meeting rooms, 
+recording sessions, scheduling future meetings, viewing past meetings, and live video calls.
+
+It includes a sidebar, navbar, reusable modal system, and fully responsive UI. 
+Deployment allows seamless real-time communication for multiple users.`,
+    links: {
+      code: 'https://github.com/ahsaanullah0088/zoom-clone',
+      page: 'https://zoom-clone-nu-two.vercel.app/',
+    },
+  },
+  {
+    id: 4,
+    year: '2025',
+    date: '23/11/2025',
+    category: 'FRONTEND',
+    title: 'Admin Dashboard',
+    image: 'dash5.png',
+    technologies: [
+      'ReactJs',
+      'Tailwind CSS',
+      'Material UI',
+      'Responsive Design',
+      'Frontend',
+    ],
+    desc: `A frontend Admin Dashboard built using React, Tailwind CSS, and Material UI. 
+It allows viewing and managing website data efficiently. 
+Includes four main pages: Home, Users, Products, and Settings. 
+Fully responsive and user-friendly.`,
+    links: {
+      code: 'https://github.com/ahsaanullah0088/react-admin-dashboard-',
+      page: 'https://dashboard-react11.netlify.app/',
+    },
+  },
+  {
+    id: 5,
+    year: '2025',
+    date: '23/11/2025',
+    category: 'APPLICATION',
+    title: 'The Beach Resort App',
+    image: 'Resort-p1.jpg',
+    technologies: [
+      'ReactJs',
+      'Material UI',
+      'Responsive Design',
+      'Frontend',
+      'Netlify',
+    ],
+    desc: `A web app focused on seamless booking for beachside resorts. 
+Users can reserve rooms, check availability, and access resort information for a smooth stay.`,
+    links: {
+      code: 'https://github.com/ahsaanullah0088/React-resorts',
+      page: 'https://resortsbyahsaan-550a33.netlify.app/',
+    },
+  },
+  {
+    id: 7,
+    year: '2025',
+    date: '23/11/2025',
+    category: 'WEB DESIGN',
+    title: 'Tours Website',
+    image: 'p4-1.png',
+    technologies: [
+      'ReactJs',
+      'Frontend',
+      'Responsive Design',
+      'Web Design',
+      'Netlify',
+    ],
+    desc: `A travel website built with ReactJs showcasing popular destinations, packages, and tours. 
+Fully responsive and visually appealing for smooth user navigation.`,
+    links: {
+      code: 'https://github.com/ahsaanullah0088/Tours',
+      page: 'https://deluxe-lebkuchen-85e4ef.netlify.app/?#',
+    },
+  },
+  {
+    id: 8,
+    year: '2025',
+    date: '23/11/2025',
+    category: 'WEB DESIGN',
+    title: 'StartUps Website',
+    image: 's1.png',
+    technologies: [
+      'ReactJs',
+      'NodeJs',
+      'Frontend',
+      'Backend',
+      'Responsive Design',
+      'Animations',
+      'Netlify',
+    ],
+    desc: `A responsive and user-friendly website for startups. 
+It has four pages: Home, About, Services, and Contact. 
+Animations and transitions enhance user engagement.`,
+    links: {
+      code: 'https://github.com/ahsaanullah0088/startup',
+      page: 'https://monumental-pegasus-1080a3.netlify.app/',
+    },
+  },
+  {
     id: 102,
     year: '2023',
     date: '30/04/2023',
-    category: 'COLABORATION',
+    category: 'COLLABORATION',
     title: 'CompraListo',
     image: 'compraListo.webp',
-    technologies: ['ReactJs', 'JS', 'Tailwind ', 'Java', 'Spring Boot'],
-    desc: `Proyecto colaborativo desarrollado durante el seleccionado7 de No Country, simulación de entorno de trabajo con duranción de 5 semanas, con un equipo de 9 personas donde participe como frontend developer.
+    technologies: ['ReactJs', 'JS', 'Tailwind', 'Java', 'Spring Boot'],
+    desc: `A collaborative project built over 5 weeks with a team of 9 developers. 
+I worked as a frontend developer.
 
-    El proyecto consistió en web app para crear, guardar y compartir tus listas de compras. Puedes ingresar desde cualquier dispositivo, crearte una cuenta y empezar a crear tus listas, compartir con tus familiares, generar un pdf o compartir por whatsapp marcar los productos que ya tienes en el supermercado y hasta te calcula cuando vas a gastar. 
-    `,
+The project is a web app for creating, saving, and sharing shopping lists. 
+Users can access it from any device, share lists with family, generate PDFs, share via WhatsApp, and calculate expenses.`,
     links: {
       code: 'https://github.com/No-Country/s7-11-t-javareact',
       page: 'https://compralisto0.vercel.app/',
@@ -256,16 +238,14 @@ const data = [
     id: 103,
     year: '2023',
     date: '10/06/2023',
-    category: 'COLABORATION',
+    category: 'COLLABORATION',
     title: 'Pigmeo',
     image: 'pigmeo.jpg',
-    technologies: ['ReactJs', 'Typescript', 'JS', 'Tailwind '],
-    desc: `Proyecto colaborativo desarrollado durante el seleccionado8 de No Country, simulación de entorno de trabajo con duranción de 5 semanas, con un equipo de 12 personas donde participe como frontend developer.
+    technologies: ['ReactJs', 'Typescript', 'JS', 'Tailwind'],
+    desc: `A collaborative project completed over 5 weeks with a team of 12 developers. 
+I worked as a frontend developer.
 
-    El proyecto consistió en web app mobile responsive desarrollada para brindar a los usuarios un control total de sus finanzas y facilitar la realización de diversas transacciones de forma rápida y segura.
-
-    -> https://www.youtube.com/watch?v=UJ5vFleryLM
-    `,
+The app is a mobile-responsive finance management platform, allowing users to manage finances and transactions safely and quickly.`,
     links: {
       code: 'https://github.com/No-Country/s8-14-t-mern',
       page: 'https://pigmeo-app.netlify.app/',

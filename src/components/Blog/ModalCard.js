@@ -1,20 +1,21 @@
+/* eslint-disable react/no-unstable-nested-components */
 /* eslint-disable import/no-dynamic-require */
 import { useEffect, useState } from 'react';
 import styles from './ModalCard.module.css';
 import me from '../../assets/profile2.png';
-//MdComponents
+
+// MD Components
 import { Link, Code } from './Renderers/Renderers';
-//Plugins
+
+// Plugins
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeSlug from 'rehype-slug';
-//coldarkDark ,hopscotch,materialDark,okaidia,tomorrow,coldarkCold
 
 function ModalCard({ data }) {
   const { id, title, date, banner, md, author, tags } = data;
   const [post, setPost] = useState('');
 
-  //console.log(md);
   const img = require(`./BlogData/${banner}`);
 
   useEffect(() => {
@@ -26,13 +27,15 @@ function ModalCard({ data }) {
       })
       .catch((err) => {});
   }, []);
+
   return (
     <div className={styles.modalContainer}>
       <h1>
-        {id}.-{`   ${title}`}
+        {id}. - {`${title}`}
       </h1>
+
       <div className={styles.tagsContainer}>
-        <p>Tags-&gt;</p>
+        <p>Tags →</p>
 
         {tags.map((tag, index) => (
           <span key={index} className={styles.tag}>
@@ -44,30 +47,32 @@ function ModalCard({ data }) {
       <div className={styles.modalImg}>
         <img width="1000px" height="500px" src={img} alt="" />
       </div>
+
       <div className={styles.header}>
         <div className={styles.avatar}>
           <img src={me} alt="" />
           <p>• {author} •</p>
         </div>
-        <span>Publicado el {date}</span>
+        <span>Published on {date}</span>
       </div>
+
       <hr />
+
       <div className={styles.modalText}>
         <ReactMarkdown
           className={styles.mdContainer}
           remarkPlugins={[[remarkGfm]]}
           rehypePlugins={[rehypeSlug]}
-          /* linkTarget="_blank" */
           components={{
-            // eslint-disable-next-line react/no-unstable-nested-components
             code: ({ ...props }) => <Code {...props} />,
-            // eslint-disable-next-line react/no-unstable-nested-components
             a: ({ ...props }) => <Link {...props} />,
           }}
         >
           {post}
         </ReactMarkdown>
-        {/* <div className="contact mtop">
+
+        {/* 
+        <div className="contact mtop">
           <h1>Leave a Reply</h1>
           <form action="" className="blog_contact d_flex">
             <div className="left">
@@ -82,7 +87,8 @@ function ModalCard({ data }) {
               <textarea cols="30" rows="20" placeholder="Comment" />
             </div>
           </form>
-        </div> */}
+        </div> 
+        */}
       </div>
     </div>
   );

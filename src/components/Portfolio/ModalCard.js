@@ -3,7 +3,7 @@ import styles from './ModalCard.module.css';
 function ModalCard({ project }) {
   const { category, title, image, desc, date, technologies, links } = project;
   // eslint-disable-next-line import/no-dynamic-require
-  const img = require(`../../assets/portafolio/${image}`);
+  const img = require(`../../assets/portfolio/${image}`);
 
   return (
     <div className={styles.modalContainer}>

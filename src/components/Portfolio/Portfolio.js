@@ -53,9 +53,9 @@ const Portfolio = () => {
               .map((project, index) => (
                 <Card key={index} project={project} />
               ))} */}
+            <Card project={PortfolioData[0]} />
+            <Card project={PortfolioData[1]} />
             <Card project={PortfolioData[2]} />
-            <Card project={PortfolioData[4]} />
-            <Card project={PortfolioData[6]} />
           </div>
         </div>
       </section>

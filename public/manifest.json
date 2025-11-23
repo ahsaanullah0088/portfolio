@@ -1,6 +1,6 @@
 {
-  "short_name": "Antonio Ayola",
-  "name": "Antonio Ayola Portafolio",
+  "short_name": "Ahsaan Ullah",
+  "name": "Ahsaan Ullah Portfolio",
   "icons": [
     {
       "src": "favicon.ico",
@@ -26,7 +26,7 @@
   "background_color": "#ecf0f3",
   "theme_color": "#66b58f",
   "categories": ["education", "entertainment", "lifestyle", "social"],
-  "description": "Antonio Ayola Portafolio",
+  "description": "Ahsaan Ullah Portfolio",
   "dir": "ltr",
   "id": "/v1",
   "lang": "es-MX",
@@ -38,7 +38,7 @@
       "sizes": "2880x4008",
       "type": "image/png",
       "platform": "wide",
-      "label": "Inicio Portafolio"
+      "label": "Inicio Portfolio"
     }
   ],
   "shortcuts": [
@@ -57,11 +57,11 @@
       "description": "Que hago"
     },
     {
-      "name": "Portafolio",
-      "short-name": "Portafolio",
+      "name": "Portfolio",
+      "short-name": "Portfolio",
       "icon": "logo96.png",
       "url": "/#portfolio",
-      "description": "Visita los pryectos mas recientes de mi portafolio"
+      "description": "Visita los pryectos mas recientes de mi Portfolio"
     },
     {
       "name": "Testimonios",

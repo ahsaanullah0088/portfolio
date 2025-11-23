@@ -26,7 +26,7 @@ export const constants = {
   language: 'es_mx',
   siteData: {
     siteUrl: 'antonioayola.netlify.app/',
-    siteRepo: 'https://github.com/Tono2007/portafolio',
+    siteRepo: 'https://github.com/Tono2007/Portfolio',
   },
 };
 export default constants;

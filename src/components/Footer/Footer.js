@@ -1,5 +1,5 @@
 import { useState, lazy, Suspense } from 'react';
-import logo1 from '../../assets/logo_fondo_blanco_1.webp';
+import logo from '../../assets/logo_fondo_blanco_1.webp';
 import line from '../../assets/llline.svg';
 
 import styles from './Footer.module.css';
@@ -8,53 +8,67 @@ import scrollTop from '../../utils/helpers/scrollTop';
 import Modal from '../Modal/Modal';
 import Loader from '../Loader';
 
+// Lazy load the AboutMe component for performance
 const AboutMe = lazy(() => import('../AboutMe/AboutMe'));
 
 const Footer = () => {
-  const [modal, setModal] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <>
+      {/* About Me Modal */}
       <Modal
-        openModal={modal}
-        fnCloseModal={() => setModal(false)}
+        openModal={isModalOpen}
+        fnCloseModal={() => setIsModalOpen(false)}
         styleContent={styles.modalContent}
       >
         <Suspense fallback={<Loader />}>
           <AboutMe />
         </Suspense>
       </Modal>
+
+      {/* Footer Section */}
       <footer className={styles.footer}>
         <div className={styles.footerContainer}>
-          <div className="img">
+          {/* Logo */}
+          <div className={styles.logoWrapper}>
             <img
-              width="300px"
-              height="300px"
-              src={logo1}
+              src={logo}
+              alt="Logo"
+              width="300"
+              height="300"
               className={styles.logoImg}
-              alt=""
             />
           </div>
-          <p>
-            {' '}
-            💻 - Construido por{' '}
+
+          {/* Author Info */}
+          <p className={styles.author}>
+            💻 Built by{' '}
             <button
               type="button"
-              onClick={() => setModal(true)}
+              onClick={() => setIsModalOpen(true)}
               className={styles.userBtn}
             >
-              @AntonioAyola{' '}
+              @AntonioAyola
             </button>{' '}
-            con 🖤 en 2022 &#x1F1F2;&#x1F1FD;
+            with 🖤 in 2022 🇵🇰
           </p>
-          <img src={line} alt="" className={styles.svg} />
-          <img src={line} alt="" className={styles.svg} />
-          <img src={line} alt="" className={styles.svg} />
-          <img src={line} alt="" className={styles.svg} />
 
+          {/* Decorative lines */}
+          <div className={styles.lines}>
+            {[...Array(4)].map((_, index) => (
+              <img
+                key={index}
+                src={line}
+                alt="decorative line"
+                className={styles.svg}
+              />
+            ))}
+          </div>
+
+          {/* Scroll to Top Button */}
           <button
-            title="Regresar arriba"
-            name="Regresar arriba"
+            title="Back to Top"
             type="button"
             className={styles.floatBtn}
             onClick={scrollTop}
@@ -62,15 +76,16 @@ const Footer = () => {
             <i className="fas fa-angle-double-up" />
           </button>
         </div>
-        <p className={styles.visitas}>
-          Num. Visitas
+
+        {/* Visitor Counter */}
+        <p className={styles.visits}>
+          Visits:{' '}
           <img
-            width="20px"
-            height="10px"
             src="https://counter1.stat.ovh/private/contadorvisitasgratis.php?c=1am2er4yl9uq6du4qfz5hdqc3enw75xt"
-            border="0"
-            title="contador de visitas"
-            alt="contador de visitas"
+            alt="Visitor counter"
+            width="20"
+            height="10"
+            title="Visitor counter"
           />
         </p>
       </footer>

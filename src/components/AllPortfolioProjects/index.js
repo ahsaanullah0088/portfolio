@@ -3,43 +3,32 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 import data from '../Blog/BlogData';
 import styles from './styles.module.css';
-//import Card from '../Portfolio/Card';
 import Card from './Card';
 
 import PortfolioData from '../Portfolio/PortfolioData';
 import style from 'react-syntax-highlighter/dist/esm/styles/hljs/a11y-dark';
 
+// Define portfolio categories
 const categories = [
-  'TODOS',
-  'DEVELOPMENT',
+  'ALL',
+  'FRONTEND',
   'WEB DESIGN',
   'APPLICATION',
-  'DESIGN',
-  'MOBILE',
-  'COLABORATION',
+  'COLLABORATION',
 ];
 
 function Index() {
-  const [activeSection, setActiveSection] = useState(0);
+  const [activeCategoryIndex, setActiveCategoryIndex] = useState(0);
   const [projectsList, setProjectsList] = useState(PortfolioData);
 
+  // Filter projects based on category
   function filterProjects(category) {
-    if (category !== 'TODOS') {
-      /* const list = [];
-      MyGroupsList.forEach((x) => {
-        const groupName = x.nombre_grupo.toLowerCase();
-        if (groupName.indexOf(e.target.value.toLowerCase()) >= 0) {
-          list.push(x);
-        }
-      });
-      setSearchList(list); */
-      const list = PortfolioData.filter(
+    if (category !== 'ALL') {
+      const filteredList = PortfolioData.filter(
         (project) => project.category === category,
       );
-
-      setProjectsList(list);
+      setProjectsList(filteredList);
     } else {
-      console.log('todos');
       setProjectsList(PortfolioData);
     }
   }
@@ -47,44 +36,39 @@ function Index() {
   return (
     <section className={styles.allPortfolio}>
       <div className="container">
+        {/* Section heading */}
         <div className={styles.heading}>
-          <h4>VISITA LOS PROYECTOS DE MI PORTAFOLIO</h4>
-          <h1>Portafolio</h1>
+          <h4>CHECK OUT THE PROJECTS IN MY PORTFOLIO</h4>
+          <h1>Portfolio</h1>
         </div>
-        {/* <div className={styles.tagsContainer}>
-          <p>Categorias-&gt;</p>
 
-          <span className={styles.tag}>APPLICATION</span>
-          <span className={styles.tag}>WEB DESIGN</span>
-          <span className={styles.tag}>MOVILE</span>
-          <span className={styles.tag}>DESKTOP</span>
-        </div> */}
+        {/* Category filter tabs */}
         <div className={styles.tagsContainer}>
-          <p>Filtrar Categorias-&gt;</p>
+          <p>Filter by Category-&gt;</p>
           <ul className={styles.tabs}>
             {categories.map((category, index) => (
               <li
                 key={index}
-                className={activeSection === index ? styles.active : null}
+                className={activeCategoryIndex === index ? styles.active : null}
               >
                 <button
                   type="button"
                   onClick={() => {
-                    setActiveSection(index);
+                    setActiveCategoryIndex(index);
                     filterProjects(category);
                   }}
                   className={styles.tabBtn}
                 >
                   {category}
                 </button>
-                {/* <span className={styles.divider}>|</span> */}
               </li>
             ))}
           </ul>
         </div>
 
+        {/* Projects grid with transition effects */}
         <TransitionGroup className={styles.contentGrid}>
-          {projectsList.map((project, index) => (
+          {projectsList.map((project) => (
             <CSSTransition
               key={project.id}
               timeout={500}
