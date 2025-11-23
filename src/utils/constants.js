@@ -10,8 +10,7 @@ export const constants = {
     number: '+923257175094',
     whatsapp: 'https://wa.me/923257175094',
     instagram: 'https://www.instagram.com/ahsaanonsocial/',
-    facebook: 'https://www.facebook.com/tono2007/',
-    buymeacoffee: 'https://www.buymeacoffee.com/antonioayola',
+    facebook: 'https://www.facebook.com/ubaidullah.ullah.9406/',
   },
   icons: {
     linkedin: 'https://i.imgur.com/z5abyyx.png',
@@ -25,8 +24,8 @@ export const constants = {
   },
   language: 'es_mx',
   siteData: {
-    siteUrl: 'antonioayola.netlify.app/',
-    siteRepo: 'https://github.com/Tono2007/Portfolio',
+    siteUrl: 'ahsaanullah.dev',
+    siteRepo: 'https://github.com/ahsaanullah0088/portfolio',
   },
 };
 export default constants;
