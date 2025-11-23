@@ -98,18 +98,17 @@ function Hero() {
                 >
                   <i className="fa-brands fa-facebook-f" />
                 </a>
+                <a
+                  title="Download Resume"
+                  href={constants.profilesUrls.cv}
+                  className={styles.socialBtn}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  aria-label="Download Resume"
+                >
+                  Resume
+                </a>
               </div>
-            </div>
-
-            <div className={`col_1 ${isInViewport ? styles.slideIn : ''}`}>
-              <h5>DOWNLOAD RESUME</h5>
-              <a
-                href="https://drive.google.com/uc?export=download&id=1OPiaoNlPxxoZ497HpWWV2knDArjwVtyX"
-                download="Ahsaan_Ullah_Resume.pdf"
-                className={styles.downloadBtn}
-              >
-                Download Resume
-              </a>
             </div>
           </div>
         </div>
