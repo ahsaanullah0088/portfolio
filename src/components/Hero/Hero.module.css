@@ -1,0 +1,164 @@
+.hero {
+}
+
+.heroActive {
+  margin-top: 10vh;
+}
+
+.heroContainer {
+  composes: container from global;
+  display: flex;
+  margin-top: .625rem;
+  padding: 2.5rem;
+}
+
+.heroLeft {
+  width: 55%;
+  margin-right: 5%;
+}
+
+.hero .heroLeft h4 {
+  font-weight: 100;
+  letter-spacing: .125rem;
+  color: var(--textSecondary);
+  animation-delay: 0.4s;
+  font-size: 1.1rem;
+}
+
+.hero h1 {
+  font-size: 3.75rem;
+  font-weight: bold;
+}
+.hero h1 span {
+  color: var(--primaryColor);
+}
+.hero h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primaryColor);
+  min-height: 5.3125rem;
+}
+.hero h2 span {
+  color: var(--textSecondary);
+}
+.hero h3 {
+  color: var(--textTertiary);
+  font-size: 1.125rem;
+  line-height: 1.875rem;
+  font-weight: normal;
+}
+.socialSkills {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+  -webkit-perspective: 1000;
+}
+.socialContainer {
+  display: flex;
+}
+
+.socialSkills h5 {
+  font-weight: 500;
+  letter-spacing: .125rem;
+  /*  color: var(--textPrimary); */
+  color: var(--textQuaternary);
+  font-size: .9375rem;
+  margin: 1.875rem 0;
+}
+
+.socialBtn {
+  composes: btnShadow from global;
+  margin: 0;
+  margin-right: 1.875rem;
+}
+.skillBtn {
+  margin-right: 1.875rem;
+
+  width: 3.9375rem;
+  height: 3.9375rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  composes: btnShadow from global;
+}
+
+.socialSkills i {
+  font-size: 1.375rem;
+}
+.socialSkills figure img {
+  object-fit: cover;
+  width: 3.125rem;
+  height: 3.125rem;
+}
+.heroRight {
+  width: 40%;
+}
+.rightImg {
+  top: 0;
+  left: 0;
+  transition: 0.3s;
+  position: relative;
+  composes: boxShadow from global;
+  border-radius: .625rem;
+  width: 100%;
+  height: 31.25rem;
+}
+.rightImg:hover {
+  top: -0.125rem;
+  left: -0.125rem;
+  box-shadow: 14px 14px 8px var(--backgroundTertiary),
+    14px -9px 8px var(--contrastBackground);
+  transform: skew(0deg, 5deg);
+}
+.img {
+  max-width: 100%;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  composes: bgPattern from global;
+  background-size: 3.125rem 3.125rem;
+}
+
+.slideIn {
+  /* composes: slideAnimation; */
+  composes: useSlideAnimation from global;
+  animation-delay: 0.2s;
+}
+.slideIn:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+@media screen and (max-width: 71.875rem) {
+  .socialSkills {
+    flex-direction: column;
+  }
+  .hero h2 {
+    font-size: 2.5rem;
+    min-height: 7.5rem;
+  }
+  .hero h1 {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 50rem) {
+  .heroLeft,
+  .heroRight {
+    width: 100%;
+    margin-bottom: 3.125rem;
+  }
+
+  .heroContainer {
+    flex-direction: column-reverse;
+    padding: 1.25rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  .socialSkills {
+    flex-direction: column;
+  }
+}

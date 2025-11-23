@@ -1,0 +1,81 @@
+/*-----Modal----*/
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.overlay {
+  composes: modal;
+  background-color: var(--backgroundPrimary);
+}
+
+.modalContent {
+  composes: container from global;
+  composes: boxShadow from global;
+  /*   background: #fff; */
+  width: auto;
+  height: auto;
+  max-height: 90vh;
+  position: relative;
+  z-index: 9999;
+  padding: 50px;
+  border-radius: .625rem;
+  overflow: auto;
+  scroll-behavior: smooth;
+  animation: fadeIn 0.4s ease-in 1 both;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+.btnWrapper {
+  position: absolute;
+  top: 2%;
+  right: 6%;
+}
+.closeBtn {
+  composes: btnShadow from global;
+  color: var(--primaryColor);
+  position: fixed;
+  width: 3.125rem;
+  height: 3.125rem;
+  text-align: center;
+  border-radius: 50%;
+  padding: 0;
+  padding-top: .1875rem;
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+@media screen and (max-width: 56.25rem) {
+  .modalContent {
+    max-height: 100vh;
+    flex-direction: column;
+    padding: 4%;
+  }
+}
+@media screen and (max-width: 56.25rem) {
+  .btnWrapper {
+    top: 2%;
+    right: 15%;
+  }
+}
+
+/*-----Modal----*/

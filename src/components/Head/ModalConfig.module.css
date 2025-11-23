@@ -1,0 +1,105 @@
+.config {
+  color: var(--textSecondary);
+}
+.config h2 {
+  color: var(--textPrimary);
+  margin-bottom: 1.875rem;
+  border-bottom: .1875rem solid var(--primaryColor);
+}
+.config h3 {
+}
+.switchContainer {
+  margin: 0 0 1.875rem 0;
+  margin-bottom: 1.875rem;
+  display: flex;
+  align-items: center;
+}
+.switchMode {
+  display: inline-block;
+  height: 2.125rem;
+  position: relative;
+  width: 3.75rem;
+  margin-right: .625rem;
+}
+
+.switchMode input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: #81d4fa;
+  cursor: pointer;
+  transition: 0.4s;
+  border-radius: 2.125rem;
+}
+
+.icon {
+  content: '';
+  position: absolute;
+  left: .25rem;
+  bottom: .25rem;
+  background-color: #fff;
+  height: 1.625rem;
+  transition: 0.4s;
+  width: 1.625rem;
+  border-radius: 50%;
+}
+.icon i {
+  margin-top: .3125rem;
+  margin-left: .3125rem;
+  color: #ffd600;
+}
+
+.switchContainer input:checked + .slider {
+  background-color: #01579b;
+}
+
+.switchContainer input:checked + .slider .icon {
+  background-color: #000;
+  transform: translateX(1.625rem);
+}
+.switchContainer input:checked + .slider .icon i {
+  color: #fff;
+}
+
+.colorsContainer {
+  margin-top: .625rem;
+  padding: .625rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  composes: boxShadow from global;
+}
+.colorsContainer span {
+  margin: .3125rem;
+  transition: 0.2s;
+  cursor: pointer;
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 50%;
+  background: #000;
+}
+.colorsContainer span:hover {
+  transform: scale(1.2);
+}
+
+.colorsContainer span:nth-child(1) {
+  background: #546e7a;
+}
+.colorsContainer span:nth-child(2) {
+  background: #00b8d4;
+}
+.colorsContainer span:nth-child(3) {
+  background: #ffa726;
+}
+.colorsContainer span:nth-child(4) {
+  background: #ff014f;
+}
+.colorsContainer span:nth-child(5) {
+  background: #66b58f;
+}

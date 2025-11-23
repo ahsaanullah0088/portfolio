@@ -1,0 +1,260 @@
+.aboutMe {
+  flex-direction: column;
+}
+
+.aboutContainer {
+  composes: container from global;
+  display: flex;
+}
+.AboutLeft {
+  width: 40%;
+  height: auto;
+  text-align: center;
+}
+.AboutLeft span {
+  color: var(--primaryColor);
+}
+.AboutRight {
+  width: 60%;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.tabs li {
+  position: relative;
+}
+.tabs .divider {
+  color: var(--textPrimary);
+}
+
+.tabs li button {
+  border-radius: 1.5625rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: .75rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--textSecondary);
+  margin: .3125rem .125rem;
+  padding: .5rem .625rem;
+}
+.tabBtn {
+  composes: boxShadow from global;
+}
+
+.tabs li button:hover {
+  color: var(--primaryColor);
+}
+
+.tabs li button::after {
+  transition: 0.1s ease;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  border-radius: 1.5625rem;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primaryColor);
+}
+.tabs li.active button::after {
+  width: 0%;
+}
+.tabs li.active button {
+  background: rgba(255, 255, 255, 0.548);
+  background: var(--primaryColor);
+  color: var(--primaryColor);
+  color: var(--textContrast);
+}
+
+.tabContent {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 0;
+}
+
+.leftImg {
+  margin: auto;
+  position: relative;
+  /* composes: boxShadow from global;*/
+  border-radius: .625rem;
+  padding: 10%;
+  margin-right: 10%;
+  composes: bgPattern from global;
+  background-size: 1.125rem 1.125rem;
+  position: sticky;
+  top: 0;
+}
+.leftImg h1,
+.leftImg p {
+  backdrop-filter: blur(1px);
+}
+
+.img {
+  border: 1px solid var(--textTertiary);
+  composes: boxShadow from global;
+  border-radius: .5rem;
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+}
+.supportBtn {
+  composes: smallBtnShadow from global;
+  display: inline-block;
+  margin: .625rem 0;
+  color: var(--primaryColor);
+}
+
+.aboutContainer h1 {
+  color: var(--textSecondary);
+
+  text-align: center;
+}
+
+.AboutRight h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--textPrimary);
+  margin: .625rem 0;
+}
+.AboutRight span {
+  color: var(--primaryColor);
+}
+
+.AboutRight p {
+  font-size: 1.0625rem;
+  line-height: 1.875rem;
+}
+
+.skillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1.25rem 0;
+}
+.skillsContainer a {
+  transition: 0.3s;
+  border-radius: .625rem;
+  padding: .375rem;
+  color: var(--textPrimary);
+  margin-top: .625rem;
+  margin-right: .625rem;
+  display: flex;
+  align-items: center;
+}
+.skillsContainer a:hover {
+  box-shadow: -1px 11px 24px -11px rgba(0, 0, 0, 0.75);
+}
+.studiesContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.studiesContainer li a {
+  display: block;
+  margin: .3125rem 0;
+}
+
+.studiesContainer li:hover a {
+  color: var(--primaryColor);
+}
+.me a {
+  color: var(--textSecondary);
+}
+.me a:hover {
+  color: var(--primaryColor);
+}
+
+.educationSection span {
+  font-size: .875rem;
+  color: var(--textTertiary);
+}
+.educationSection h4 {
+  color: var(--textSecondary);
+}
+.aboutMe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;        /* Centers horizontally */
+  justify-content: center;    /* Centers vertically */
+  text-align: center;         /* Centers text */
+  width: 100%;
+}
+.aboutContainer {
+  composes: container from global;
+  display: flex;
+  justify-content: center;   /* Center horizontally */
+  align-items: center;       /* Center items vertically */
+  gap: 2rem;                 /* Space between left and right */
+  width: 100%;
+}
+
+.AboutRight {
+  width: 100%;
+  margin: 0 auto;           /* Center block */
+}
+@media screen and (max-width: 48rem) {
+  .aboutContainer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .AboutRight,
+  .AboutLeft {
+    width: 100%;
+  }
+
+  .tabContent {
+    align-items: center;
+  }
+
+  .AboutRight p {
+    text-align: center;
+  }
+}
+
+
+@media screen and (max-width: 48rem) {
+  .AboutRight,
+  .AboutLeft {
+    width: 100%;
+    margin-bottom: 1.875rem;
+  }
+
+  .aboutContainer {
+    flex-direction: column;
+  }
+
+  .aboutContainer h1 {
+    font-size: 1.875rem;
+    font-weight: bold;
+  }
+}
+.title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: var(--primaryColor);
+}
+
+
+@media screen and (max-width: 27.5rem) {
+  .aboutContainer h1 {
+    font-size: 1.5625rem;
+  }
+  .leftImg {
+    padding: 0;
+    padding: 5% 0;
+    margin-right: 0;
+  }
+}

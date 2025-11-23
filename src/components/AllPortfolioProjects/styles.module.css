@@ -1,0 +1,113 @@
+.heading {
+  composes: heading from global;
+  text-align: center;
+}
+
+.seeAllBtn {
+  composes: smallBtnShadow from global;
+  color: var(--primaryColor);
+  position: absolute;
+  top: 6.875rem;
+  right: 3%;
+}
+.tagsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.875rem;
+}
+.tag {
+  composes: tag from global;
+}
+
+.tagsContainer p {
+  font-weight: bold;
+  color: var(--textTertiary);
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+.tabs li {
+  position: relative;
+}
+.tabs .divider {
+  color: var(--textPrimary);
+}
+
+.tabs li button {
+  border-radius: 1.5625rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: .75rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--textSecondary);
+  margin: .3125rem .125rem;
+  padding: .5rem .625rem;
+}
+.tabBtn {
+  composes: boxShadow from global;
+}
+
+.tabs li button:hover {
+  color: var(--primaryColor);
+}
+
+.tabs li button::after {
+  transition: 0.1s ease;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  border-radius: 1.5625rem;
+  left: 0;
+  width: 0;
+  height: .125rem;
+  background: var(--primaryColor);
+}
+.tabs li.active button::after {
+  width: 0%;
+}
+.tabs li.active button {
+  background: rgba(255, 255, 255, 0.548);
+  background: var(--primaryColor);
+  color: var(--primaryColor);
+  color: var(--textContrast);
+}
+
+.contentGrid {
+  /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+  margin-bottom: 10rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.875rem;
+}
+@media screen and (max-width: 71.875rem) {
+  .contentGrid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.875rem;
+  }
+}
+@media screen and (max-width: 56.25rem) {
+  .contentGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.875rem;
+  }
+}
+
+@media screen and (max-width: 37.5rem) {
+  .contentGrid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1.875rem;
+  }
+}
+
+/*----------------------------------*/

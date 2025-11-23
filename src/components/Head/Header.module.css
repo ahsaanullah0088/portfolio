@@ -1,0 +1,195 @@
+.header {
+  height: 10vh;
+}
+
+.headerActive {
+  height: 12vh;
+  max-height: 6.25rem;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: var(--backgroundPrimary);
+  box-shadow: -1px 11px 24px -11px rgba(0, 0, 0, 0.75);
+  transition: 0.5s;
+}
+
+.nav {
+  height: 100%;
+  composes: container from global;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+nav li a::after {
+  transition: 1s ease;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  border-radius: 1.5625rem;
+  left: 0;
+  width: 0;
+  height: .125rem;
+  background: var(--primaryColor);
+}
+:global nav li.active a::after {
+  width: 100%;
+}
+:global nav li.active a {
+  color: var(--primaryColor);
+}
+
+.logo {
+  margin-top: .625rem;
+  width: auto;
+  height: 2.8125rem;
+  cursor: pointer;
+}
+
+.navLinks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-transform: uppercase;
+}
+.navLinks li {
+  position: relative;
+  margin-left: 1.875rem;
+}
+
+.navLinks li a {
+  transition: 0.5s;
+  font-size: .8125rem;
+  font-weight: 500;
+  letter-spacing: .0625rem;
+}
+
+.navLinks li a:hover {
+  color: var(--primaryColor);
+}
+.cogBtn {
+  font-size: 1.125rem;
+  composes: fas fa-cog from global;
+  animation-name: rotation;
+  animation-duration: 3.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+.cogBtn:hover {
+  animation-duration: 2s;
+}
+
+.homeBtn {
+  padding: 1.125rem 1.5625rem;
+  border-radius: .375rem;
+  transition: 0.3s all ease;
+  cursor: pointer;
+  height: fit-content;
+  color: var(--primaryColor);
+  composes: btnShadow from global;
+}
+.homeBtn:hover {
+  transform: translateY(0px);
+}
+
+.navMobileLinks {
+  composes: navLinks;
+  position: fixed;
+  display: none;
+  list-style: none;
+  box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.23),
+    0 30px 60px -30px rgb(0, 0, 0);
+  left: 0;
+  top: 0;
+  transition: all 0.5s;
+  width: 60%;
+  width: 0;
+  overflow: hidden;
+  height: 110vh;
+  background-color: var(--backgroundPrimary);
+  z-index: 888;
+}
+.navMobileLinksWidth {
+  width: 60%;
+}
+.navMobileLinks li {
+  width: 100%;
+  transition: 0.5s;
+  line-height: 4.0625rem;
+}
+.navMobileLinks li a::after {
+  max-width: 6.25rem;
+}
+
+.showMobile {
+  display: none;
+}
+.mobileBtns {
+  transition: 0.5s;
+  position: absolute;
+  color: var(--primaryColor);
+  font-size: 1.5625rem;
+  z-index: 999;
+  composes: showMobile;
+}
+
+.openBtn {
+  composes: mobileBtns;
+  top: 35px;
+  right: 30px;
+  cursor: pointer;
+}
+.closeBtn {
+  composes: homeBtn mobileBtns;
+  border-radius: 50%;
+  padding: 0;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  top: 35px;
+  right: 45%;
+}
+.btn-open-icon{
+  composes: fas fa-bars from global;
+}
+.btn-close-icon{
+  composes: fas fa-times from global;
+}
+
+@media (max-width: 78.125rem) {
+  /* .homeBtn {
+    display: none;
+  }*/
+}
+
+@media (max-width: 78.125rem) {
+  .homeBtn {
+    display: block;
+  }
+  .showMobile {
+    display: block;
+  }
+
+  .navLinks {
+    display: none;
+  }
+  .navMobileLinks {
+    padding-top: 1.875rem;
+    display: block;
+  }
+}
+
+.modalContentConfigOverlay {
+  background: rgba(0, 0, 0, 0.24);
+}

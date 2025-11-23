@@ -1,0 +1,184 @@
+.contact {
+  composes: container from global;
+  margin-top: 5rem;
+}
+
+.heading {
+  composes: heading from global;
+  text-align: center;
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+.left {
+  width: 36%;
+  position: relative;
+}
+
+.right {
+  width: 60%;
+  composes: boxShadow from global;
+  padding: 2.1875rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.box {
+  padding: 1.875rem;
+  composes: boxShadow from global;
+}
+.img {
+  composes: boxShadow from global;
+  max-height: 25rem;
+  width: 100%;
+  margin: auto;
+}
+
+.img img {
+  border: 1px solid var(--primaryColor);
+
+  width: 100%;
+  height: 100%;
+  height: 25rem;
+  object-fit: cover;
+  border-radius: .3125rem;
+}
+.details h1 {
+  margin: 1.25rem 0;
+  font-size: 2.1875rem;
+}
+.details p {
+  font-style: 1.0625rem;
+}
+.details span {
+  color: var(--textSecondary);
+}
+
+.socialContainer {
+  margin-top: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  composes: bgPattern from global;
+  background-size: .9375rem .9375rem;
+}
+
+.socialContainer a {
+  margin-top: .625rem;
+  /*  margin-right: 25px; */
+}
+
+.socialContainer a i {
+  font-size: 1.25rem;
+}
+
+.form {
+  margin-top: 3.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
+  margin-bottom: 1.25rem;
+  padding-top: 1.25rem;
+  position: relative;
+}
+
+.input label {
+  position: absolute;
+  top: 0;
+  left: 5px;
+  font-size: .8125rem;
+}
+
+.input input:focus + label,
+.input textarea:focus + label {
+  font-weight: 600;
+}
+
+.inputRow {
+  width: 50%;
+}
+.inputRow,
+.input {
+  color: var(--textSecondary);
+}
+.submitBtn {
+  composes: btnShadow from global;
+  width: 100%;
+  color: var(--primaryColor);
+}
+
+.submitBtn:hover {
+  color: var(--textContrast);
+}
+
+.submitBtn i {
+  margin-left: .3125rem;
+  font-size: .9375rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .content {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    margin-bottom: 3.125rem;
+    margin-top: 1.875rem;
+  }
+}
+@media screen and (max-width: 34.375rem) {
+  .heading {
+    margin: 0px 0px;
+  }
+  .heading h1 {
+    font-size: 3.125rem;
+  }
+
+  .inputRow {
+    width: 100%;
+  }
+}
+
+.loader {
+  margin-right: 1.5625rem;
+  border: 13px solid var(--backgroundTertiary); /* Light grey */
+  border-top: 13px solid var(--primaryColor); /* Blue */
+  border-radius: 50%;
+  width: 3.75rem;
+  height: 3.75rem;
+  animation: spin 1.5s linear infinite;
+}
+.loader + p {
+  font-size: .9375rem;
+  font-weight: bold;
+}
+.errorMsg {
+  width: 100%;
+  text-align: center;
+  margin-top: .625rem;
+  color: #d50000;
+  font-size: .9375rem;
+  font-weight: bold;
+}
+.successMsg {
+  composes: errorMsg;
+  color: #4caf50;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

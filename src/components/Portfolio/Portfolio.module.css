@@ -1,0 +1,124 @@
+.portafolio {
+  position: relative;
+  color: var(--textSecondary);
+}
+
+.heading {
+  composes: heading from global;
+  text-align: center;
+}
+.seeAllBtn {
+  composes: smallBtnShadow from global;
+  color: var(--primaryColor);
+  position: absolute;
+  top: 6.875rem;
+  right: 3%;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.875rem;
+}
+
+.card {
+  composes: boxShadow from global;
+  border-radius: .625rem;
+  padding: 1.125rem 1.5625rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.img {
+  width: 100%;
+  max-height: 18.75rem;
+
+  transition: 0.5s;
+  overflow: hidden;
+  border-radius: .625rem;
+  box-shadow: 10px 15px 20px -15px rgba(0, 0, 0, 0.459);
+}
+
+.img img {
+  object-fit: cover;
+  border-radius: .625rem;
+  min-height: 18.75rem;
+  height: auto;
+  width: 100%;
+  transition: 0.5s;
+}
+
+.img:hover img {
+  transform: scale(1.05);
+}
+.category {
+  display: flex;
+  justify-content: space-between;
+  margin: .9375rem 0 .9375rem 0;
+  text-transform: uppercase;
+}
+.category span:nth-child(1) {
+  color: var(--primaryColor);
+  font-size: .8125rem;
+  letter-spacing: .125rem;
+  font-weight: 500;
+}
+.category span:nth-child(2) {
+  color: var(--textPrimary);
+}
+
+.arrow {
+  position: absolute;
+  right: .9375rem;
+  bottom: .9375rem;
+  transform: rotate(-45deg);
+  color: var(--primaryColor);
+  opacity: 0;
+  transition: 0.5s;
+}
+.arrow i {
+  font-size: 1.25rem;
+}
+
+.card:hover .arrow {
+  opacity: 1;
+}
+
+.card h2 {
+  color: var(--textPrimary);
+  text-align: left;
+  font-size: 1.125rem;
+  transition: 0.5s;
+  padding-bottom: 1.25rem;
+}
+
+.card:hover h2 {
+  color: var(--primaryColor);
+}
+
+.card span i {
+  margin-right: .625rem;
+}
+@media screen and (max-width: 56.25rem) {
+  .contentGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.875rem;
+  }
+}
+
+@media screen and (max-width: 37.5rem) {
+  .contentGrid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1.875rem;
+  }
+  .seeAllBtn {
+    top: 8.125rem;
+    right: 3%;
+  }
+}
+
+.modalContent {
+  /*  min-width: 90vw;
+  min-height: 90vh; */
+  width: 100%;
+}

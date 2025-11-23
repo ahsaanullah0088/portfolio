@@ -1,0 +1,112 @@
+.footer {
+  text-align: center;
+  margin: 10% 0 5% 0;
+}
+.footerContainer {
+  composes: container from global;
+  position: relative;
+}
+
+.footer img {
+  width: 21.875rem;
+}
+.logoImg{
+  width: 21.875rem;
+  height: auto;
+}
+
+.svg {
+  position: absolute;
+  width: 9.375rem;
+  height: 9.375rem;
+}
+.svg:nth-of-type(1) {
+  top: 0;
+  right: 0;
+}
+.svg:nth-of-type(2) {
+  top: 5rem;
+  left: 5rem;
+  transform: rotate(45deg) skew(20deg);
+}
+.svg:nth-of-type(3) {
+  bottom: 0;
+  left: 0;
+}
+.svg:nth-of-type(4) {
+  bottom: 5rem;
+  right: 5rem;
+  transform: rotate(45deg) skew(20deg);
+}
+
+.floatBtn i {
+  color: var(--primaryColor);
+  font-size: 1.5625rem;
+}
+.floatBtn:hover {
+  cursor: pointer;
+  background: var(--primaryColor);
+}
+.floatBtn:hover i {
+  color: var(--textContrast);
+}
+.floatBtn {
+  transition: 0.5s;
+  composes: boxShadow from global;
+  padding: 1.125rem 1.5625rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  animation-name: up;
+  animation-duration: 0.9s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease;
+}
+
+.userBtn {
+  font-size: 1.0625rem;
+}
+.userBtn:hover {
+  cursor: pointer;
+  color: var(--primaryColor);
+  font-size: 1.0625rem;
+}
+.modalContent {
+  height: 85vh;
+}
+.visitas {
+  font-size: 0.7rem;
+}
+.visitas img {
+  margin-left: 7px;
+  width: 2.1875rem;
+  height: auto;
+}
+
+@keyframes up {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-25px);
+  }
+}
+
+@media screen and (max-width: 28.125rem) {
+  .footer img {
+    width: 12.5rem;
+  }
+  .visitas img {
+    margin-left: .4375rem;
+    width: 2.1875rem;
+    height: auto;
+  }
+}
+@media screen and (max-width: 53.125rem) {
+  .svg {
+    display: none;
+  }
+}
