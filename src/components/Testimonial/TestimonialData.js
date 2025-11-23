@@ -1,60 +1,54 @@
-/* import user from '../../assets/testimonial/appdt.webp'; */
-
 const data = [
   {
     id: 0,
-    profileImg: 'appdt.webp',
-    company: 'APPDT Software',
-    name: 'Ing. Miguel Méndez Sánchez',
-    level: 'Director General',
-    work: 'Programador Analista',
-    date: '15 de Abril, 2019',
-    testimony: `El proyecto que desarrollo el cual se logró un avance satisfactorio cumpliendo tiempos y objetivos.
-    Cabe mencionar que el trabajo que Antonio realizo fue muy certero creando un excelente equipo de trabajo.`,
+    profileImg: 'image.png',
+    company: 'Fiverr',
+    name: 'Adeel H.',
+    level: 'Client',
+    work: 'Custom Stripe Integration',
+    date: '24 April, 2025',
+    testimony: `Great experience working with Ahsaan. He understood everything clearly and delivered exactly what I needed. The payment flow works perfectly now. Will definitely hire again.`,
   },
   {
     id: 1,
-    profileImg: 'juanFranciscoIA.webp',
-    company: 'CIC IPN',
-    name: 'M. en C. Juan Francisco Islas Austria',
-    level: 'Project Manager',
-    work: 'Programador Frontend',
-    date: '28 de Diciembre, 2022',
-    testimony: `Que es una ciudadano con una conducta intachable. Ha demostrado ser un excelente 
-      compañero y un gran colaborador, comprometido, responsable y fiel cumplidor de sus tareas. 
-      Siempre ha manifestado preocupación por mejorar, aprender nuevas tecnologías y actualizar 
-      sus conocimientos`,
+    profileImg: 'image.png',
+    company: 'Fiverr',
+    name: 'Alina',
+    level: 'Client',
+    work: 'React Frontend Fixes',
+    date: '11 April, 2025',
+    testimony: `Very professional and fast. Ahsaan fixed all the UI issues on my React site and improved the responsiveness. Communication was smooth throughout.`,
   },
-  /* 
   {
     id: 2,
-    profileImg: '',
-    company: 'APPDT Software',
-    name: 'Miguel Mendez',
-    level: 'CEO',
-    work: 'Programador Analista',
-    testimony:
-      'Cabe mencionar que el trabajo que Antonio realizo fue muy certero creando un excelente equipo de trabajo',
+    profileImg: 'image.png',
+    company: 'Fiverr',
+    name: 'Jorje.',
+    level: 'Client',
+    work: 'Shopify Custom Features',
+    date: '29 March, 2025',
+    testimony: `He delivered clean and well‑structured code. The custom cart system and validations work flawlessly. Appreciate the effort!`,
   },
   {
     id: 3,
-    profileImg: '',
-    company: 'APPDT Software',
-    name: 'Miguel Mendez',
-    level: 'CEO',
-    work: 'Programador Analista',
-    testimony:
-      'Cabe mencionar que el trabajo que Antonio realizo fue muy certero creando un excelente equipo de trabajo',
+    profileImg: 'image.png',
+    company: 'Fiverr',
+    name: 'Helena R',
+    level: 'Client',
+    work: 'API Integration + Dashboard',
+    date: '14 March, 2025',
+    testimony: `Reliable and skilled developer. He integrated my APIs, fixed several bugs, and improved the dashboard speed. Very happy with the results.`,
   },
   {
     id: 4,
-    profileImg: '',
-    company: 'APPDT Software',
-    name: 'Miguel Mendez',
-    level: 'CEO',
-    work: 'Programador Analista',
-    testimony:
-      'Cabe mencionar que el trabajo que Antonio realizo fue muy certero creando un excelente equipo de trabajo',
-  }, */
+    profileImg: 'image.png',
+    company: 'Fiverr',
+    name: 'Kamran',
+    level: 'Client',
+    work: 'Website Debugging & Speed Optimization',
+    date: '08 February, 2025',
+    testimony: `Good work! My site was slow and had multiple issues. Ahsaan fixed all of them and improved the loading time noticeably. Recommended.`,
+  },
 ];
+
 export default data;

@@ -133,15 +133,6 @@ const Header = () => {
                 contact
               </a>
             </li>
-
-            {/* Modal Settings */}
-            <li>
-              <a title="settings" href="#!" onClick={handleOpen}>
-                <i className={styles.cogBtn} title="Theme Config" />
-              </a>
-            </li>
-
-            {/* Resume button */}
             <li>
               <a
                 className={styles.homeBtn}
@@ -152,6 +143,15 @@ const Header = () => {
                 Resume
               </a>
             </li>
+
+            {/* Modal Settings */}
+            <li>
+              <a title="settings" href="#!" onClick={handleOpen}>
+                <i className={styles.cogBtn} title="Theme Config" />
+              </a>
+            </li>
+
+            {/* Resume button */}
 
             {/* Social icons */}
             {socialLinks.map((key) => {
