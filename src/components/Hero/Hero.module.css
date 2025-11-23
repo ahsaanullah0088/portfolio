@@ -184,15 +184,11 @@
   .socialSkills {
     flex-direction: column;
   }
-}@media screen and (max-width: 50rem) {
-  .rightImg {
-    height: 18rem; /* reduce height for mobile */
-  }
-
-  .rightImg img {
-    height: 100%;
-    width: auto; /* maintain aspect ratio */
-    max-width: 100%;
+}
+/* Hide hero image on small screens (mobile) */
+@media screen and (max-width: 50rem) {
+  .heroRight {
+    display: none;
   }
 }
 
