@@ -2,7 +2,7 @@ import styles from './Testimonial.module.css';
 /* 
 const img = require.context('../../assets', true); */
 const Slide = ({ valueIndex, index, dataLength, data }) => {
-  const { id, company, name, level, work, testimony, date, profileImg } = data;
+  const { company, name, level, work, testimony, date, profileImg } = data;
 
   // eslint-disable-next-line import/no-dynamic-require
   const img = require(`../../assets/testimonial/${profileImg}`);

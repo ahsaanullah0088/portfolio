@@ -8,7 +8,7 @@ const ModalCard = lazy(() => import('./ModalCard'));
 
 const Card = ({ data }) => {
   const [modal, setModal] = useState(false);
-  const { id, title, date, banner } = data;
+  const { title, date, banner } = data;
   // eslint-disable-next-line import/no-dynamic-require
   const img = require(`./BlogData/${banner}`);
 
