@@ -110,3 +110,13 @@
 .modalContent {
   background: var(--contrastBackground);
 }
+@media screen and (max-width: 37.5rem) { /* mobile */
+  .seeAllBtn {
+    position: static; /* remove absolute positioning */
+    display: block;   /* take full width if needed */
+    margin: 0 auto 0 auto ; /* space above from heading */
+    text-align: center; 
+    margin-bottom: 1rem;      /* center button */
+  }
+}
+

@@ -191,5 +191,27 @@
     display: none;
   }
 }
+/* Mobile adjustments for Hero section: 2x2 grid for social + resume buttons */
+@media screen and (max-width: 50rem) {
+  .socialContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 buttons per row */
+    gap: 1rem; /* space between buttons */
+    align-items: center;
+  }
+
+  /* Reset margins for buttons */
+  .socialBtn {
+    margin: 0;
+    justify-content: center; /* center icons/text */
+    text-align: center;
+  }
+
+  /* Make HeroLeft full width */
+  .heroLeft {
+    width: 100%;
+    margin-right: 0;
+  }
+}
 
 

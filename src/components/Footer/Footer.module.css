@@ -110,3 +110,26 @@
     display: none;
   }
 }
+
+@media screen and (max-width: 28.125rem) { /* mobile */
+  .footer img,
+  .logoImg {
+    width: 12.5rem;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* centers the image */
+  }
+
+  .footerContainer {
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;     /* center vertically if needed */
+    flex-direction: column;  /* stack items vertically if there are multiple */
+  }
+
+  .visitas img {
+    margin-left: .4375rem;
+    width: 2.1875rem;
+    height: auto;
+  }
+}
