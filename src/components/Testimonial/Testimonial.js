@@ -17,7 +17,7 @@ const Testimonial = () => {
     if (index > lastIndex) {
       setIndex(0);
     }
-  }, [index, testimonialData]);
+  }, [index]);
 
   useEffect(() => {
     const slider = setInterval(() => {

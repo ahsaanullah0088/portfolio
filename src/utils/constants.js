@@ -5,7 +5,7 @@ export const constants = {
     linkedin: 'https://www.linkedin.com/in/ahsaan-ullah-769172253/',
     github: 'https://github.com/ahsaanullah0088',
     email: 'ahsaanu70@gmail.com',
-    cv: 'https://drive.google.com/uc?export=download&id=1OPiaoNlPxxoZ497HpWWV2knDArjwVtyX',
+    cv: 'https://drive.google.com/uc?export=download&id=1OPiaoNlP xxoZ497HpWWV2knDArjwVtyX',
     twitter: 'https://twitter.com/ahsaanullah0088',
     number: '+923257175094',
     whatsapp: 'https://wa.me/923257175094',

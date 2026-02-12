@@ -8,7 +8,7 @@ import styles from './Card.module.css';
 const ModalCard = lazy(() => import('../Portfolio/ModalCard'));
 
 const Card = ({ project }) => {
-  const { id, category, date, title, image } = project;
+  const { category, date, title, image } = project;
   const [modalOpen, setModalOpen] = useState(false);
 
   // Dynamically import the project image

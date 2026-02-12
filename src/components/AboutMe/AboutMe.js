@@ -1,6 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useState } from 'react';
-import hero from '../../assets/profile.png';
 import styles from './AboutMe.module.css';
 import { constants } from '../../utils/constants';
 

@@ -1,12 +1,10 @@
 import { useState } from 'react';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
-import data from '../Blog/BlogData';
 import styles from './styles.module.css';
 import Card from './Card';
 
 import PortfolioData from '../Portfolio/PortfolioData';
-import style from 'react-syntax-highlighter/dist/esm/styles/hljs/a11y-dark';
 
 // Define portfolio categories
 const categories = [
