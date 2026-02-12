@@ -1,25 +1,52 @@
-.Portfolio {
+/* ===============================
+   Portfolio Section
+=============================== */
+
+.portfolio {
   position: relative;
   color: var(--textSecondary);
+  padding: 6rem 0;
+  overflow-x: hidden; /* ✅ remove scrollbars */
 }
+
+
+/* ===============================
+   Heading
+=============================== */
 
 .heading {
   composes: heading from global;
   text-align: center;
 }
+
+
+/* ===============================
+   Button (fixed layout)
+=============================== */
+
 .seeAllBtn {
   composes: smallBtnShadow from global;
   color: var(--primaryColor);
-  position: absolute;
-  top: 6.875rem;
-  right: 3%;
+
+  display: block;          /* ✅ no absolute */
+  margin: 1.5rem auto 3rem;
 }
+
+
+/* ===============================
+   Grid
+=============================== */
 
 .contentGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1.875rem;
+  gap: 1.875rem;
 }
+
+
+/* ===============================
+   Card
+=============================== */
 
 .card {
   composes: boxShadow from global;
@@ -27,13 +54,21 @@
   padding: 1.125rem 1.5625rem;
   cursor: pointer;
   position: relative;
+  transition: 0.3s ease;
 }
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+
+/* ===============================
+   Image
+=============================== */
 
 .img {
   width: 100%;
-  max-height: 18.75rem;
-
-  transition: 0.5s;
+  max-height: 18rem;
   overflow: hidden;
   border-radius: .625rem;
   box-shadow: 10px 15px 20px -15px rgba(0, 0, 0, 0.459);
@@ -41,9 +76,7 @@
 
 .img img {
   object-fit: cover;
-  border-radius: .625rem;
-  min-height: 18.75rem;
-  height: auto;
+  height: 100%;
   width: 100%;
   transition: 0.5s;
 }
@@ -51,31 +84,45 @@
 .img:hover img {
   transform: scale(1.05);
 }
+
+
+/* ===============================
+   Category
+=============================== */
+
 .category {
   display: flex;
   justify-content: space-between;
-  margin: .9375rem 0 .9375rem 0;
+  margin: .9rem 0;
   text-transform: uppercase;
 }
+
 .category span:nth-child(1) {
   color: var(--primaryColor);
   font-size: .8125rem;
   letter-spacing: .125rem;
   font-weight: 500;
 }
+
 .category span:nth-child(2) {
   color: var(--textPrimary);
 }
 
+
+/* ===============================
+   Arrow
+=============================== */
+
 .arrow {
   position: absolute;
-  right: .9375rem;
-  bottom: .9375rem;
+  right: .9rem;
+  bottom: .9rem;
   transform: rotate(-45deg);
   color: var(--primaryColor);
   opacity: 0;
-  transition: 0.5s;
+  transition: 0.3s;
 }
+
 .arrow i {
   font-size: 1.25rem;
 }
@@ -84,41 +131,74 @@
   opacity: 1;
 }
 
+
+/* ===============================
+   Title
+=============================== */
+
 .card h2 {
   color: var(--textPrimary);
   text-align: left;
   font-size: 1.125rem;
-  transition: 0.5s;
-  padding-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  transition: 0.3s;
 }
 
 .card:hover h2 {
   color: var(--primaryColor);
 }
 
-.card span i {
-  margin-right: .625rem;
-}
+
+
+/* ======================================================
+   TABLET
+====================================================== */
+
 @media screen and (max-width: 56.25rem) {
   .contentGrid {
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1.875rem;
   }
 }
+
+
+/* ======================================================
+   MOBILE (compact + shorter)
+====================================================== */
 
 @media screen and (max-width: 37.5rem) {
-  .contentGrid {
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 1.875rem;
+
+  .portfolio {
+    padding: 3rem 0; /* shorter section */
   }
+
+  .contentGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .card {
+    padding: 0.9rem;
+  }
+
+  .img {
+    max-height: 12rem; /* smaller images */
+  }
+
+  .card h2 {
+    font-size: 1rem;
+  }
+
   .seeAllBtn {
-    top: 8.125rem;
-    right: 3%;
+    margin: 1rem auto 2rem;
   }
 }
 
+
+/* ===============================
+   Modal
+=============================== */
+
 .modalContent {
-  /*  min-width: 90vw;
-  min-height: 90vh; */
   width: 100%;
+  max-width: 100vw;
 }

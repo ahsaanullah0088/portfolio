@@ -75,11 +75,11 @@
 }
 
 .tabContent {
-  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding-top: 0;
+  justify-content: flex-start;
+  height: auto;        /* important */
+  overflow: visible;   /* remove scroll */
 }
 
 .leftImg {
@@ -129,10 +129,16 @@
 .AboutRight span {
   color: var(--primaryColor);
 }
+.AboutRight {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;   /* clean breathing space */
+}
 
 .AboutRight p {
   font-size: 1.0625rem;
-  line-height: 1.875rem;
+  line-height: 1.9rem;
+  text-align: justify;   /* 🔥 this fixes alignment */
 }
 
 .skillsContainer {
@@ -225,21 +231,29 @@
 
 
 @media screen and (max-width: 48rem) {
+  .aboutContainer {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    padding: 0 1rem;
+  }
+
   .AboutRight,
   .AboutLeft {
     width: 100%;
-    margin-bottom: 1.875rem;
   }
 
-  .aboutContainer {
-    flex-direction: column;
+  .AboutRight p {
+    font-size: 0.95rem;   /* smaller text */
+    line-height: 1.6rem;
+    text-align: justify;  /* still justified */
   }
 
-  .aboutContainer h1 {
-    font-size: 1.875rem;
-    font-weight: bold;
+  .tabContent {
+    overflow: visible;
   }
 }
+
 .title {
   text-align: center;
   font-size: 2rem;
