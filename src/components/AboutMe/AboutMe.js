@@ -8,22 +8,13 @@ function About() {
     <div className={styles.me}>
       <h2>Who I am & more about me</h2>
       <p>
-        I’m a Software Engineer who focuses on building scalable, reliable, and
-        human-centered digital systems. Over the past two years, I’ve worked
-        across real estate platforms, e-commerce systems, AI-powered tools,
-        healthcare apps, and community tech initiatives—turning ideas into
-        production-ready solutions using modern engineering practices and clean
-        architectures.
-        <br />
-        I’ve also delivered end-to-end payment integrations for businesses,
-        helping them deploy Stripe, Shopify gateways, and custom payment flows.
-        <br />
-        One of my most impactful builds is <strong>Eshop</strong>, a multivendor
-        Ecommerce platform featuring real-time communication, socket-based chat,
-        and a Redis-powered low-latency infrastructure that keeps doctors and
-        users connected with instant updates. I’m also working on an AI Image
-        Generator App built with modern web technologies, scalable APIs, and
-        Cloudinary-based media pipelines.
+        A results-driven Software Engineer skilled in developing real-time
+        communication systems using Socket.io, implementing JWT-based
+        authentication, and optimized application performance through efficient
+        database queries, caching strategies with redis caching, in-memory
+        caching, browser level caching. Adept at building REST APIs, integrating
+        payment gateways (Stripe, Google Pay, FastPay), and deploying
+        applications on Vercel, Netlify, and Render with CI/CD best practices.
         <br />
         To strengthen my problem-solving mindset, I’ve completed
         <strong> 150+ LeetCode problems in C++ </strong>, focusing on
@@ -32,9 +23,7 @@ function About() {
         <br />
         Beyond engineering, I actively contribute to the tech community as an
         MLSA Beta Ambassador, UEIT Society Marketing Lead, Dev Weekends Core
-        Member, and mentor in web development and DSA. I’ve helped organize
-        conferences, hackathons, and bootcamps with MLSA-UE, GDSC-UE, and UEIT
-        Society— empowering students to learn, collaborate, and innovate.
+        Member, and mentor in web development and DSA.
         <br />
         Across everything I build, my goal remains simple: to engineer systems
         that are scalable, seamless, and built with purpose—transforming complex
